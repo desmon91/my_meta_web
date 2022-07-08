@@ -9,7 +9,7 @@ export default function Avatar({ ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/avatar_final.glb");
   const { actions } = useAnimations(animations, group);
-  const [name, setName] = useState("idle");
+  const [name, setName] = useState("waving");
 
   useEffect(() => {
     actions[name].reset().fadeIn(0.8).play();

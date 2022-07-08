@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Canvas } from "@react-three/fiber";
 import Box from "../objects/box";
 import Avatar from "../objects/Avatar";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { Suspense } from "react";
+import { OrbitControls, PerspectiveCamera, Text } from "@react-three/drei";
+import { Suspense, useRef, useEffect } from "react";
+import WelcomeText from "../objects/WelcomeText";
 
 export default function Home(props) {
   return (
@@ -16,17 +16,10 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main> */}
-
       <Canvas style={{ width: "100vw", height: "100vh" }}>
         <Suspense fallback={null}>
           <gridHelper />
           <axesHelper />
-
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -45,23 +38,10 @@ export default function Home(props) {
 
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <Box position={[0, 5, 0]} />
+          <WelcomeText />
           <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
         </Suspense>
       </Canvas>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
   );
 }

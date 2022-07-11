@@ -9,11 +9,13 @@ export default function Avatar({ ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/avatar_final.glb");
   const { actions } = useAnimations(animations, group);
-  const [name, setName] = useState("waving");
+  const [name, setName] = useState("wave_hand");
 
   useEffect(() => {
-    actions[name].reset().fadeIn(0.8).play();
-    return () => actions[name].fadeOut(0.8);
+    if (name) {
+      actions[name].reset().fadeIn(0.8).play();
+      return () => actions[name].fadeOut(0.8);
+    }
   }, [name]);
 
   //animation will reset in 5 seconds

@@ -6,6 +6,9 @@ import Avatar from "../objects/Avatar";
 import { OrbitControls, PerspectiveCamera, Text } from "@react-three/drei";
 import { Suspense, useRef, useEffect } from "react";
 import WelcomeText from "../objects/WelcomeText";
+import AboutText from "../objects/AboutText";
+import ProjectText from "../objects/ProjectText";
+import ContactText from "../objects/ContactText";
 
 export default function Home(props) {
   return (
@@ -30,6 +33,7 @@ export default function Home(props) {
             //for rotating camera up or down in x,y,z
             target={[0, 1.5, 0]}
           />
+          <fogExp2 attach="fog" color="grey" density={0.05} />
           <PerspectiveCamera
             makeDefault
             //this is for moving camera position up or down in x,y,z
@@ -39,6 +43,9 @@ export default function Home(props) {
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <WelcomeText />
+          <AboutText />
+          <ProjectText />
+          <ContactText />
           <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
         </Suspense>
       </Canvas>

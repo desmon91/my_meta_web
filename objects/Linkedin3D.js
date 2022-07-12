@@ -11,8 +11,14 @@ export default function Linkedin3D({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
-        geometry={nodes.Curve.geometry}
-        material={materials["SVGMat.001"]}
+        geometry={nodes.Plane.geometry}
+        material={nodes.Plane.material}
+        scale={0.51}
+      />
+      <mesh
+        geometry={nodes.Text.geometry}
+        material={nodes.Text.material}
+        scale={0.7}
       />
     </group>
   );

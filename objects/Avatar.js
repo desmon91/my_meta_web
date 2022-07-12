@@ -11,28 +11,28 @@ export default function Avatar({ ...props }) {
   const { actions } = useAnimations(animations, group);
   const [name, setName] = useState("wave_hand");
 
-  useEffect(() => {
-    if (name) {
-      actions[name].reset().fadeIn(0.8).play();
-      return () => actions[name].fadeOut(0.8);
-    }
-  }, [name]);
+  // useEffect(() => {
+  //   if (name) {
+  //     actions[name].reset().fadeIn(0.8).play();
+  //     return () => actions[name].fadeOut(0.8);
+  //   }
+  // }, [name]);
 
   //animation will reset in 5 seconds
   const SECOND_MS = 10000;
   const ACTION_LIST = ["idle", "bored", "stretching"];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Will return a integer between 0 and 2
-      const action_id = Math.floor(Math.random() * 3);
-      setName(ACTION_LIST[action_id]);
-    }, SECOND_MS);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // Will return a integer between 0 and 2
+  //     const action_id = Math.floor(Math.random() * 3);
+  //     setName(ACTION_LIST[action_id]);
+  //   }, SECOND_MS);
 
-    // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  //   // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <group ref={group} {...props} dispose={null}>

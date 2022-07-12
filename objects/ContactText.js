@@ -3,6 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef, useEffect, useState } from "react";
 import { useSpring, animated, config } from "@react-spring/three";
 import Email3D from "./Email3D";
+import Linkedin3D from "./Linkedin3D";
 
 export default function ContactText() {
   const el = useRef();
@@ -18,7 +19,10 @@ export default function ContactText() {
   return (
     <group name="wtxt">
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[-2.8, 2.2, 4]}
         rotation={[0, 2.5, 0]}
@@ -31,7 +35,10 @@ export default function ContactText() {
       </AnimatedText>
 
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[-2.8, 1.6, 4]}
         rotation={[0, 2.5, 0]}
@@ -43,10 +50,22 @@ export default function ContactText() {
         Me
       </AnimatedText>
       <Email3D
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         position={[-2.8, 0.8, 3.7]}
         rotation={[1.5, 0, 3.7]}
         scale={1}
+      />
+      <Linkedin3D
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
+        position={[-3.2, 0.79, 3.4]}
+        rotation={[1.5, 0, 3.7]}
+        scale={0.4}
       />
     </group>
   );

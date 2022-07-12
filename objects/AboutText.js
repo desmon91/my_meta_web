@@ -18,7 +18,10 @@ export default function AboutText() {
   return (
     <group name="wtxt">
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[2.8, 2.2, -1.2]}
         rotation={[0, -1.5, 0]}
@@ -31,7 +34,10 @@ export default function AboutText() {
       </AnimatedText>
 
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[2.8, 1.6, -1.2]}
         rotation={[0, -1.5, 0]}
@@ -43,7 +49,10 @@ export default function AboutText() {
         Me
       </AnimatedText>
       <Button3D
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         position={[2.8, 0.8, -0.6]}
         rotation={[1.58, 0, 1.5]}
         scale={0.4}

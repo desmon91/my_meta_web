@@ -1,4 +1,4 @@
-import { Box, Text } from "@react-three/drei";
+import { Box, Text, Text3D } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef, useEffect, useState } from "react";
 import { useSpring, animated, config } from "@react-spring/three";
@@ -17,10 +17,13 @@ export default function WelcomeText() {
   return (
     <group name="wtxt">
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
-        position={[-2.8, 2.2, -2]}
-        rotation={[0, 0.3, 0]}
+        position={[-2.2, 2.45, -1.4]}
+        rotation={[0, 1.2, 0]}
         anchorX={"left"}
         name="wtxt"
         scale={scale}
@@ -30,10 +33,12 @@ export default function WelcomeText() {
       </AnimatedText>
 
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
         fontSize={0.6}
-        position={[-2.8, 1.6, -2]}
-        rotation={[0, 0.3, 0]}
+        position={[-2.2, 1.85, -1.4]}
+        rotation={[0, 1.2, 0]}
         anchorX={"left"}
         className="wtxt"
         scale={scale}
@@ -42,10 +47,12 @@ export default function WelcomeText() {
         To
       </AnimatedText>
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
         fontSize={0.6}
-        position={[-2.8, 1, -2]}
-        rotation={[0, 0.3, 0]}
+        position={[-2.2, 1.25, -1.4]}
+        rotation={[0, 1.2, 0]}
         anchorX={"left"}
         className="wtxt"
         scale={scale}
@@ -54,10 +61,13 @@ export default function WelcomeText() {
         My
       </AnimatedText>
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
-        position={[-2.8, 0.4, -2]}
-        rotation={[0, 0.3, 0]}
+        position={[-2.2, 0.65, -1.4]}
+        rotation={[0, 1.2, 0]}
         anchorX={"left"}
         className="wtxt"
         scale={scale}

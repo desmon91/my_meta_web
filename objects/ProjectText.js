@@ -18,7 +18,10 @@ export default function ProjectText() {
   return (
     <group name="wtxt">
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[3, 2.2, 2.8]}
         rotation={[0, 3.5, 0]}
@@ -31,7 +34,10 @@ export default function ProjectText() {
       </AnimatedText>
 
       <AnimatedText
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         fontSize={0.6}
         position={[3, 1.6, 2.8]}
         rotation={[0, 3.5, 0]}
@@ -43,7 +49,10 @@ export default function ProjectText() {
         Project
       </AnimatedText>
       <Button3D
-        color="black"
+        color="orange"
+        outlineColor={"black"}
+        outlineWidth={0.01}
+        castShadow
         position={[2.38, 0.8, 3]}
         rotation={[1.58, 0, -3.5]}
         scale={0.4}

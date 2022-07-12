@@ -1,14 +1,19 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Canvas } from "@react-three/fiber";
-import Box from "../objects/box";
 import Avatar from "../objects/Avatar";
-import { OrbitControls, PerspectiveCamera, Text } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  Shadow,
+} from "@react-three/drei";
 import { Suspense, useRef, useEffect } from "react";
 import WelcomeText from "../objects/WelcomeText";
 import AboutText from "../objects/AboutText";
 import ProjectText from "../objects/ProjectText";
 import ContactText from "../objects/ContactText";
+import City3D from "../objects/City3D";
 
 export default function Home(props) {
   return (
@@ -19,12 +24,24 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Canvas style={{ width: "100vw", height: "100vh" }}>
+      <Canvas
+        style={{
+          width: "100vw",
+          height: "100vh",
+          background: "grey",
+        }}
+      >
         <Suspense fallback={null}>
           <gridHelper />
           <axesHelper />
+          <Shadow
+            color="black"
+            colorStop={0}
+            opacity={0.5}
+            fog={false} // Reacts to fog (default=false)
+          />
           <OrbitControls
-            enableZoom={false}
+            // enableZoom={false}
             enablePan={false}
             //for locking the rotation only in sideways
             maxPolarAngle={1.5}
@@ -37,16 +54,18 @@ export default function Home(props) {
           <PerspectiveCamera
             makeDefault
             //this is for moving camera position up or down in x,y,z
+            far={100}
             position={[0, 3, 0]}
           />
 
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
+          <Environment files="moonless_golf_2k.hdr" />
+          <hemisphereLight color={"lightyellow"} intensity={0.8} />
+          <City3D scale={2} position={[0, -0.55, -4]} rotation={[0, -2, 0]} />
           <WelcomeText />
           <AboutText />
           <ProjectText />
           <ContactText />
-          <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
+          <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} castShadow />
         </Suspense>
       </Canvas>
     </div>

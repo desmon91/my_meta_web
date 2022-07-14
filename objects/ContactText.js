@@ -2,23 +2,11 @@ import { Box, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef, useEffect, useState } from "react";
 import { useSpring, animated, config } from "@react-spring/three";
-import Email3D from "./Email3D";
-import Linkedin3D from "./Linkedin3D";
 
 export default function ContactText() {
-  const el = useRef();
-  const AnimatedText = animated(Text);
-
-  const { scale, fillOpacity } = useSpring({
-    to: { scale: 1, fillOpacity: 1 },
-    from: { scale: 0.9, fillOpacity: 0 },
-
-    config: config.molasses,
-  });
-
   return (
     <group name="wtxt">
-      <AnimatedText
+      <Text
         color="orange"
         outlineColor={"black"}
         outlineWidth={0.01}
@@ -28,13 +16,11 @@ export default function ContactText() {
         rotation={[0, 2.5, 0]}
         anchorX={"left"}
         name="wtxt"
-        scale={scale}
-        fillOpacity={fillOpacity}
       >
         Contact
-      </AnimatedText>
+      </Text>
 
-      <AnimatedText
+      <Text
         color="orange"
         outlineColor={"black"}
         outlineWidth={0.01}
@@ -44,29 +30,9 @@ export default function ContactText() {
         rotation={[0, 2.5, 0]}
         anchorX={"left"}
         className="wtxt"
-        scale={scale}
-        fillOpacity={fillOpacity}
       >
         Me
-      </AnimatedText>
-      <Email3D
-        color="orange"
-        outlineColor={"black"}
-        outlineWidth={0.01}
-        castShadow
-        position={[-2.8, 0.8, 3.7]}
-        rotation={[1.5, 0, 3.7]}
-        scale={1}
-      />
-      <Linkedin3D
-        color="orange"
-        outlineColor={"black"}
-        outlineWidth={0.01}
-        castShadow
-        position={[-3.2, 0.79, 3.4]}
-        rotation={[1.5, 0, 3.7]}
-        scale={0.4}
-      />
+      </Text>
     </group>
   );
 }

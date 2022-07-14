@@ -12,321 +12,72 @@ export default function City3D({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group
-          name="Text006"
-          position={[-2.76, 4.64, -3.24]}
-          rotation={[Math.PI / 2, 0, Math.PI]}
-          scale={[0.61, 0.49, 0.49]}
-        />
-        <group
-          name="Text005"
-          position={[-0.39, 2.05, -3.56]}
-          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-          scale={0.5}
-        />
         <mesh
           name="Cube"
           geometry={nodes.Cube.geometry}
           material={materials["Material.012"]}
-          position={[-3.98, 0.06, 0.81]}
-          scale={[4.7, 0.23, 5.73]}
         />
         <mesh
           name="Cube006"
           geometry={nodes.Cube006.geometry}
           material={materials["Material.011"]}
-          position={[5.42, 0, 0.81]}
-          scale={[4.7, 0.23, 5.73]}
         />
         <mesh
           name="Cylinder028"
           geometry={nodes.Cylinder028.geometry}
           material={materials["Material.005"]}
-          position={[2.43, 0.38, -4.84]}
-          scale={[0.04, 0.11, 0.04]}
         />
-        <group
-          name="OutherSide001"
-          position={[2.27, 1.13, 1.06]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide001_1"
-            geometry={nodes.OutherSide001_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide001_2"
-            geometry={nodes.OutherSide001_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
-        <group
+        <mesh
           name="OutherSide002"
-          position={[2.69, 1.13, -4.52]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide002_1"
-            geometry={nodes.OutherSide002_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide002_2"
-            geometry={nodes.OutherSide002_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
-        <group
+          geometry={nodes.OutherSide002.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
           name="OutherSide003"
-          position={[-3.83, 1.13, -4.52]}
-          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide003_1"
-            geometry={nodes.OutherSide003_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide003_2"
-            geometry={nodes.OutherSide003_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
+          geometry={nodes.OutherSide003.geometry}
+          material={materials["Material.016"]}
+        />
         <mesh
           name="Cylinder027"
           geometry={nodes.Cylinder027.geometry}
           material={materials["Material.005"]}
-          position={[0.71, 0.38, -4.84]}
-          scale={[0.04, 0.11, 0.04]}
         />
         <mesh
           name="Cylinder029"
           geometry={nodes.Cylinder029.geometry}
           material={materials["Material.005"]}
-          position={[-1.19, 0.38, -4.84]}
-          scale={[0.04, 0.11, 0.04]}
         />
         <mesh
           name="Cylinder043"
           geometry={nodes.Cylinder043.geometry}
           material={materials["Material.005"]}
-          position={[-3.79, 0.38, -4.84]}
-          scale={[0.04, 0.11, 0.04]}
         />
         <mesh
-          name="Cube021"
-          geometry={nodes.Cube021.geometry}
-          material={materials["Material.009"]}
-          position={[2.89, 0.11, -3.59]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.18, -0.13, -1.06]}
-        />
-        <mesh
-          name="Cube022"
-          geometry={nodes.Cube022.geometry}
-          material={materials["Material.009"]}
-          position={[3.43, 0.11, -3.59]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.18, -0.13, -1.06]}
-        />
-        <mesh
-          name="Cube023"
-          geometry={nodes.Cube023.geometry}
-          material={materials["Material.009"]}
-          position={[3.98, 0.11, -3.59]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.18, -0.13, -1.06]}
-        />
-        <mesh
-          name="Cube024"
-          geometry={nodes.Cube024.geometry}
-          material={materials["Material.009"]}
-          position={[5.15, 0.11, -4.23]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.11, -0.13, -0.66]}
-        />
-        <mesh
-          name="Cube025"
-          geometry={nodes.Cube025.geometry}
-          material={materials["Material.009"]}
-          position={[5.15, 0.11, -2.31]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.11, -0.13, -0.66]}
-        />
-        <mesh
-          name="Cube026"
-          geometry={nodes.Cube026.geometry}
-          material={materials["Material.009"]}
-          position={[5.15, 0.11, -0.36]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.11, -0.13, -0.66]}
-        />
-        <mesh
-          name="Cube027"
-          geometry={nodes.Cube027.geometry}
-          material={materials["Material.009"]}
-          position={[5.15, 0.11, 1.56]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.11, -0.13, -0.66]}
-        />
-        <mesh
-          name="Cube029"
-          geometry={nodes.Cube029.geometry}
-          material={materials["Material.009"]}
-          position={[5.15, 0.11, 5.38]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.11, -0.13, -0.66]}
-        />
-        <mesh
-          name="Cube030"
-          geometry={nodes.Cube030.geometry}
-          material={materials["Material.009"]}
-          position={[4.59, 0.11, -3.59]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.18, -0.13, -1.06]}
-        />
-        <group
           name="OutherSide004"
-          position={[5.02, 3.84, 2.69]}
-          rotation={[Math.PI / 2, 0, Math.PI / 2]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide004_1"
-            geometry={nodes.OutherSide004_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide004_2"
-            geometry={nodes.OutherSide004_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
-        <group
-          name="OutherSide005"
-          position={[1.25, 3.84, 2.69]}
-          rotation={[Math.PI / 2, 0, Math.PI / 2]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide005_1"
-            geometry={nodes.OutherSide005_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide005_2"
-            geometry={nodes.OutherSide005_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
-        <group
-          name="OutherSide006"
-          position={[-3.54, 3.84, 2.69]}
-          rotation={[Math.PI / 2, 0, Math.PI / 2]}
-          scale={0}
-        >
-          <mesh
-            name="OutherSide006_1"
-            geometry={nodes.OutherSide006_1.geometry}
-            material={materials["Plastic Matte.001"]}
-          />
-          <mesh
-            name="OutherSide006_2"
-            geometry={nodes.OutherSide006_2.geometry}
-            material={materials["Metal.002"]}
-          />
-        </group>
-        <mesh
-          name="Cylinder055"
-          geometry={nodes.Cylinder055.geometry}
+          geometry={nodes.OutherSide004.geometry}
           material={materials["Material.016"]}
-          position={[1.59, 1.4, 0.99]}
-          scale={[0.07, 0.11, 0.07]}
+        />
+        <mesh
+          name="OutherSide005"
+          geometry={nodes.OutherSide005.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="OutherSide006"
+          geometry={nodes.OutherSide006.geometry}
+          material={materials["Material.016"]}
         />
         <mesh
           name="Cube031"
           geometry={nodes.Cube031.geometry}
           material={materials["Material.017"]}
-          position={[1.72, 5.29, 0.96]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.05, -0.13, -0.66]}
         />
         <mesh
           name="BezierCurve"
           geometry={nodes.BezierCurve.geometry}
           material={materials["Material.010"]}
-          position={[-0.33, 4.97, 0.53]}
-          rotation={[-2.92, 0.07, 3.13]}
         />
-        <mesh
-          name="BezierCurve004"
-          geometry={nodes.BezierCurve004.geometry}
-          material={materials["Material.010"]}
-          position={[6.42, 4.97, 0.56]}
-          rotation={[-2.92, 0.07, 3.13]}
-        />
-        <mesh
-          name="BezierCurve005"
-          geometry={nodes.BezierCurve005.geometry}
-          material={materials["Material.010"]}
-          position={[6.42, 4.97, 0.76]}
-          rotation={[-2.92, 0.07, 3.13]}
-        />
-        <mesh
-          name="BezierCurve006"
-          geometry={nodes.BezierCurve006.geometry}
-          material={materials["Material.010"]}
-          position={[6.42, 4.97, 1.18]}
-          rotation={[-2.92, 0.07, 3.13]}
-        />
-        <mesh
-          name="BezierCurve007"
-          geometry={nodes.BezierCurve007.geometry}
-          material={materials["Material.010"]}
-          position={[6.42, 4.97, 1.37]}
-          rotation={[-2.92, 0.07, 3.13]}
-        />
-        <mesh
-          name="Cylinder056"
-          geometry={nodes.Cylinder056.geometry}
-          material={materials["Material.004"]}
-          position={[1.62, 0.89, 3.06]}
-          rotation={[0, -1.44, 0]}
-          scale={[-0.02, -0.03, -0.02]}
-        />
-        <mesh
-          name="Cylinder057"
-          geometry={nodes.Cylinder057.geometry}
-          material={materials["Material.004"]}
-          position={[1.5, 0.89, 3.06]}
-          rotation={[0, -1.44, 0]}
-          scale={[-0.02, -0.03, -0.02]}
-        />
-        <mesh
-          name="Cylinder058"
-          geometry={nodes.Cylinder058.geometry}
-          material={materials["Material.004"]}
-          position={[1.38, 0.89, 3.06]}
-          rotation={[0, -1.44, 0]}
-          scale={[-0.02, -0.03, -0.02]}
-        />
-        <mesh
-          name="Cube059"
-          geometry={nodes.Cube059.geometry}
-          material={materials.Material}
-          position={[5.42, 0, 0.81]}
-          scale={[4.7, 0.23, 5.73]}
-        />
-        <group
-          name="taxi"
-          position={[3.75, 0.76, 7.91]}
-          rotation={[0, -1.57, 0]}
-          scale={0.01}
-        >
+        <group name="taxi" position={[-18.67, 0.65, -6.97]}>
           <mesh
             name="Mesh029"
             geometry={nodes.Mesh029.geometry}
@@ -368,58 +119,257 @@ export default function City3D({ ...props }) {
             material={materials["Material.059"]}
           />
         </group>
-        <group name="Cube004" position={[1.65, 1.05, 4.15]}>
-          <mesh
-            name="Cube006_1"
-            geometry={nodes.Cube006_1.geometry}
-            material={materials["Material.026"]}
-          />
-          <mesh
-            name="Cube006_2"
-            geometry={nodes.Cube006_2.geometry}
-            material={materials["Material.053"]}
-          />
-          <mesh
-            name="Cube006_3"
-            geometry={nodes.Cube006_3.geometry}
-            material={materials["Material.054"]}
-          />
-        </group>
         <mesh
           name="Cylinder073"
           geometry={nodes.Cylinder073.geometry}
           material={materials["Material.016"]}
-          position={[-3.76, 1.4, 0.99]}
-          scale={[0.07, 0.11, 0.07]}
         />
         <mesh
           name="Cube028"
           geometry={nodes.Cube028.geometry}
           material={materials["Material.017"]}
-          position={[-3.64, 5.1, 0.96]}
-          rotation={[-Math.PI, 0, -Math.PI]}
-          scale={[-0.05, -0.13, -0.66]}
         />
         <mesh
           name="BezierCurve001"
           geometry={nodes.BezierCurve001.geometry}
           material={materials["Material.010"]}
-          position={[-0.33, 4.97, 0.76]}
-          rotation={[-2.92, 0.07, 3.13]}
         />
         <mesh
           name="BezierCurve002"
           geometry={nodes.BezierCurve002.geometry}
           material={materials["Material.010"]}
-          position={[-0.33, 4.97, 1.14]}
-          rotation={[-2.92, 0.07, 3.13]}
         />
         <mesh
           name="BezierCurve003"
           geometry={nodes.BezierCurve003.geometry}
           material={materials["Material.010"]}
-          position={[-0.33, 4.97, 1.37]}
-          rotation={[-2.92, 0.07, 3.13]}
+        />
+        <mesh
+          name="Cube003"
+          geometry={nodes.Cube003.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube010"
+          geometry={nodes.Cube010.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube011"
+          geometry={nodes.Cube011.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cylinder005"
+          geometry={nodes.Cylinder005.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="BezierCurve009"
+          geometry={nodes.BezierCurve009.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve010"
+          geometry={nodes.BezierCurve010.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve011"
+          geometry={nodes.BezierCurve011.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve012"
+          geometry={nodes.BezierCurve012.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="Cylinder008"
+          geometry={nodes.Cylinder008.geometry}
+          material={materials["Material.004"]}
+        />
+        <group name="Cube016">
+          <mesh
+            name="Cube017_1"
+            geometry={nodes.Cube017_1.geometry}
+            material={materials["Material.026"]}
+          />
+          <mesh
+            name="Cube017_2"
+            geometry={nodes.Cube017_2.geometry}
+            material={materials["Material.053"]}
+          />
+          <mesh
+            name="Cube017_3"
+            geometry={nodes.Cube017_3.geometry}
+            material={materials["Material.054"]}
+          />
+        </group>
+        <mesh
+          name="Cylinder001"
+          geometry={nodes.Cylinder001.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="Cube001"
+          geometry={nodes.Cube001.geometry}
+          material={materials["Material.017"]}
+        />
+        <mesh
+          name="Cube002"
+          geometry={nodes.Cube002.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          name="Cylinder002"
+          geometry={nodes.Cylinder002.geometry}
+          material={materials["Material.005"]}
+        />
+        <mesh
+          name="OutherSide007"
+          geometry={nodes.OutherSide007.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="OutherSide008"
+          geometry={nodes.OutherSide008.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="OutherSide009"
+          geometry={nodes.OutherSide009.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="Cylinder003"
+          geometry={nodes.Cylinder003.geometry}
+          material={materials["Material.005"]}
+        />
+        <mesh
+          name="Cylinder004"
+          geometry={nodes.Cylinder004.geometry}
+          material={materials["Material.005"]}
+        />
+        <mesh
+          name="Cylinder006"
+          geometry={nodes.Cylinder006.geometry}
+          material={materials["Material.005"]}
+        />
+        <mesh
+          name="Cube004"
+          geometry={nodes.Cube004.geometry}
+          material={materials["Material.017"]}
+        />
+        <mesh
+          name="BezierCurve004"
+          geometry={nodes.BezierCurve004.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve005"
+          geometry={nodes.BezierCurve005.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve006"
+          geometry={nodes.BezierCurve006.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="BezierCurve007"
+          geometry={nodes.BezierCurve007.geometry}
+          material={materials["Material.010"]}
+        />
+        <mesh
+          name="Cylinder009"
+          geometry={nodes.Cylinder009.geometry}
+          material={materials["Material.016"]}
+        />
+        <mesh
+          name="Cube005"
+          geometry={nodes.Cube005.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube007"
+          geometry={nodes.Cube007.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube008"
+          geometry={nodes.Cube008.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube009"
+          geometry={nodes.Cube009.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube013"
+          geometry={nodes.Cube013.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube012"
+          geometry={nodes.Cube012.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube014"
+          geometry={nodes.Cube014.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube015"
+          geometry={nodes.Cube015.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube017"
+          geometry={nodes.Cube017.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube018"
+          geometry={nodes.Cube018.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube019"
+          geometry={nodes.Cube019.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube020"
+          geometry={nodes.Cube020.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube021"
+          geometry={nodes.Cube021.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube022"
+          geometry={nodes.Cube022.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube023"
+          geometry={nodes.Cube023.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube024"
+          geometry={nodes.Cube024.geometry}
+          material={materials["Material.009"]}
+        />
+        <mesh
+          name="Cube025"
+          geometry={nodes.Cube025.geometry}
+          material={materials["Material.009"]}
         />
       </group>
     </group>

@@ -82,7 +82,7 @@ export default function MyCanvas() {
           <PerspectiveCamera
             makeDefault
             //this is for moving camera position up or down in x,y,z
-            far={100}
+            far={50}
             position={[0, 3, 0]}
           />
 

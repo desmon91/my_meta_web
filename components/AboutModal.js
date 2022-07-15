@@ -1,3 +1,5 @@
+import Image from "next/image";
+import profilePic from "../public/profile_closeup.JPG";
 export default function AboutModal({ hideModal, showModal }) {
   return (
     <div
@@ -39,10 +41,25 @@ export default function AboutModal({ hideModal, showModal }) {
                 </svg>
               </button>
             </div>
+            {/* image profile */}
+            <div class="mt-5 min-w-sm min-h-sm max-w-lg max-h-lg">
+              <Image
+                class="rounded-full"
+                src={profilePic}
+                width={"100%"}
+                height={"100%"}
+              />
+            </div>
+            <h3 class="text-3xl font-semibold text-orange-500">About</h3>
             {/* text content */}
-            <div class="mt-2">
-              <p class="text-sm text-center text-gray-500">
-                This is about modal
+            <div class="my-2 px-5">
+              <p class="text-md text-center text-gray-500">
+                Hello, my name is Desmond Kristian, I currently worked as a Full
+                Stack Web Developer and as a UX Designer. I like to describe
+                myself as the jack of all trades who love to design and make a
+                product with a user-centric design approach. Aiming for a
+                helpful product with an enjoyable user experience is what makes
+                me love this field of expertise.
               </p>
             </div>
           </div>

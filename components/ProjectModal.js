@@ -10,7 +10,7 @@ export default function ProjectModal({ hideModal, showModal }) {
       {/* modal container */}
       <div class="fixed z-10 inset-0 overflow-y-auto flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
         {/* paper container */}
-        <div class="relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full p-4">
+        <div class="relative bg-white rounded-lg text-left overflow-auto  shadow-xl transform transition-all max-h-96 sm:my-8 sm:max-w-lg sm:w-full p-4">
           {/* content container */}
           <div class="text-center">
             {/* Close icon */}
@@ -39,11 +39,113 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </svg>
               </button>
             </div>
+
             {/* text content */}
-            <div class="mt-2">
-              <p class="text-sm text-center text-gray-500">
-                This is project modal
-              </p>
+            {/* list container */}
+            <div class="my-2 text-left">
+              <h3 class="text-3xl font-semibold text-orange-500">
+                Latest Project
+              </h3>
+            </div>
+            {/* item container */}
+
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">Motix App</h3>
+                  <p class="text-sm text-gray-500">
+                    Design a mobile ticketing app for a movie theater
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">DIY Hub</h3>
+                  <p class="text-sm text-gray-500">
+                    Design responsive website for DIY tutorials
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">Talen App</h3>
+                  <p class="text-sm text-gray-500">
+                    Design a cross-platform tool to help people learn how to
+                    read in a new language
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">HDM App</h3>
+                  <p class="text-sm text-gray-500">
+                    Create an end-to-end internal web application for the
+                    company Health Database Management (HDM) clinic
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">
+                    eSimper App
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Create an end-to-end internal web application for company
+                    driving license administration process
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="my-5 text-left max-w-xs">
+                  <h3 class="text-xl font-semibold text-gray-700">
+                    iRemember App
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Create an end-to-end internal web application for compliance
+                    document tracking and monitoring
+                  </p>
+                </div>
+              </div>
+              <div>
+                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                  Case Study
+                </button>
+              </div>
             </div>
           </div>
         </div>

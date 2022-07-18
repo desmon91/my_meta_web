@@ -5,12 +5,21 @@ import React, { Suspense, useRef, useEffect, useState } from "react";
 
 import AboutModal from "../components/AboutModal";
 import ProjectModal from "../components/ProjectModal";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
+  AdaptiveDpr,
+  AdaptiveEvents,
+  Environment,
+  FirstPersonControls,
+  MeshReflectorMaterial,
   OrbitControls,
   PerspectiveCamera,
+  Preload,
+  PresentationControls,
   Shadow,
   Sky,
+  Stars,
+  Stats,
 } from "@react-three/drei";
 import MyPointLight from "../objects/MyPointLight";
 import City3D from "../objects/City3D";
@@ -26,21 +35,15 @@ import {
   DepthOfField,
   EffectComposer,
   Outline,
+  SelectiveBloom,
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
+import { Blending } from "three";
 
 export default function Home(props) {
-  const aboutButtonRef = useRef();
-  const projectButtonRef = useRef();
-  const emailIconRef = useRef();
-  const linkedinIconRef = useRef();
-  const lightRef1 = useRef();
+  const lightRef = useRef();
   const [hoveredButton, onHoverButton] = useState(null);
   const selectedButton = hoveredButton ? hoveredButton : undefined;
-  const [hoveredEmail, onHoverEmail] = useState(null);
-  const selectedEmail = hoveredEmail ? hoveredEmail : undefined;
-  const [hoveredLinkedin, onHoverLinkedin] = useState(null);
-  const selectedLinkedin = hoveredLinkedin ? hoveredLinkedin : undefined;
   const [showAboutModal, hideAboutModal] = useState(true);
   const [showProjectModal, hideProjectModal] = useState(true);
 
@@ -60,155 +63,157 @@ export default function Home(props) {
       <AboutModal hideModal={hideAboutModal} showModal={showAboutModal} />
       <ProjectModal hideModal={hideProjectModal} showModal={showProjectModal} />
       {/* canvas area */}
-      <>
+
+      <Suspense fallback={<span>loading...</span>}>
         <Canvas
           style={{
             width: "100vw",
             height: "100vh",
           }}
+          frameloop="demand"
+          performance={{ min: 0.1 }}
         >
-          <Suspense fallback={null}>
-            <gridHelper />
-            <axesHelper />
-            <Sky
-              distance={10000}
-              turbidity={0}
-              rayleigh={0.2}
-              azimuth={0.1}
-              inclination={0.5}
-              mieCoefficient={0}
-              mieDirectionalG={0}
-            />
+          {/* Performance component */}
+          <Preload all />
+          <AdaptiveDpr pixelated />
+          <AdaptiveEvents />
+          {/* Helper component */}
+          <Stats />
+          <gridHelper />
+          <axesHelper />
+          {/* Sky component */}
+          <Sky
+            distance={1000}
+            turbidity={0}
+            rayleigh={1000}
+            azimuth={0}
+            inclination={0.5}
+            mieCoefficient={0}
+            mieDirectionalG={0}
+          />
+          <Stars
+            radius={80}
+            depth={50}
+            count={5000}
+            factor={4}
+            saturation={10}
+            fade
+            speed={1}
+          />
+          {/* Camera component */}
+          <Shadow
+            color="black"
+            colorStop={0}
+            opacity={0.5}
+            fog={true} // Reacts to fog (default=false)
+          />
+          <OrbitControls
+            // enableZoom={false}
+            // enablePan={false}
+            //for locking the rotation only in sideways
+            maxPolarAngle={1.5}
+            //for locking the rotation only in sideways
+            minPolarAngle={1.5}
+            //for rotating camera up or down in x,y,z
+            target={[0, 1.5, 0]}
+            enableDamping={false}
+            regress
+          />
 
-            <Shadow
-              color="black"
-              colorStop={0}
-              opacity={0.5}
-              fog={true} // Reacts to fog (default=false)
-            />
-            <OrbitControls
-              // enableZoom={false}
-              enablePan={false}
-              //for locking the rotation only in sideways
-              maxPolarAngle={1.5}
-              //for locking the rotation only in sideways
-              minPolarAngle={1.5}
-              //for rotating camera up or down in x,y,z
-              target={[0, 1.5, 0]}
-            />
-            <PerspectiveCamera
-              makeDefault
-              //this is for moving camera position up or down in x,y,z
-              far={100}
-              position={[0, 3, 0]}
-            />
+          <PerspectiveCamera
+            makeDefault
+            //this is for moving camera position up or down in x,y,z
 
-            {/* <Environment files="moonless_golf_2k.hdr" /> */}
-            <hemisphereLight color={"lightblue"} intensity={0.8} />
-            <MyPointLight
-              position={[0, 8, 22]}
-              intensity={0.1}
-              sphereSize={2}
-              castShadow
-              color="yellow"
+            position={[0, 3, 0]}
+          />
+
+          <Environment files="moonless_golf_2k.hdr" />
+          <hemisphereLight color={"lightblue"} intensity={0.5} castShadow />
+
+          <MyPointLight
+            position={[0, 8, 22]}
+            intensity={0.1}
+            sphereSize={2}
+            castShadow
+            color="lighyellow"
+          />
+          <MyPointLight
+            position={[5.5, 8, 6]}
+            intensity={0.1}
+            sphereSize={2}
+            castShadow
+            color="lighyellow"
+          />
+          <MyPointLight
+            position={[13, 8, -6.5]}
+            intensity={0.1}
+            sphereSize={2}
+            castShadow
+            color="lighyellow"
+          />
+          <City3D scale={2} position={[0, -0.55, -4]} rotation={[0, -2, 0]} />
+
+          <WelcomeText />
+          <AboutText />
+          <ProjectText />
+          <ContactText />
+          <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
+          <Button3D
+            name="about-button"
+            hideModal={hideAboutModal}
+            onHoverButton={onHoverButton}
+            castShadow
+            recieveShadow
+            position={[2.8, 0.8, -0.6]}
+            rotation={[1.58, 0, 1.5]}
+            scale={0.4}
+          />
+          <Button3D
+            name="project-button"
+            hideModal={hideProjectModal}
+            onHoverButton={onHoverButton}
+            castShadow
+            recieveShadow
+            position={[2.38, 0.8, 3]}
+            rotation={[1.58, 0, -3.5]}
+            scale={0.4}
+          />
+          <Email3D
+            onHoverButton={onHoverButton}
+            openInNewTab={openInNewTab}
+            castShadow
+            recieveShadow
+            position={[-2.8, 0.8, 3.7]}
+            rotation={[1.5, 0, 3.7]}
+            scale={1}
+          />
+          <Linkedin3D
+            onHoverButton={onHoverButton}
+            openInNewTab={openInNewTab}
+            castShadow
+            recieveShadow
+            position={[-3.2, 0.79, 3.4]}
+            rotation={[1.5, 0, 3.7]}
+            scale={0.4}
+          />
+          <fogExp2 attach="fog" color="darkorange" density={0.03} />
+          <EffectComposer autoClear={false}>
+            <DepthOfField
+              focusDistance={0} // where to focus
+              focalLength={0.1} // focal length
+              bokehScale={0.5} // bokeh size
+              blendFunction={BlendFunction.Screen}
             />
-            <MyPointLight
-              position={[5.5, 8, 6]}
-              intensity={0.1}
-              sphereSize={2}
-              castShadow
-              color="yellow"
-            />
-            <MyPointLight
-              position={[13, 8, -6.5]}
-              intensity={0.1}
-              sphereSize={2}
-              castShadow
-              color="yellow"
-            />
-            <City3D scale={2} position={[0, -0.55, -4]} rotation={[0, -2, 0]} />
-            <AboutText />
-            <WelcomeText />
-            <ProjectText />
-            <ContactText />
-            <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} castShadow />
-            <Button3D
-              name="about-button"
-              hideModal={hideAboutModal}
-              onHoverButton={onHoverButton}
-              castShadow
-              recieveShadow
-              position={[2.8, 0.8, -0.6]}
-              rotation={[1.58, 0, 1.5]}
-              scale={0.4}
-            />
-            <Button3D
-              name="project-button"
-              hideModal={hideProjectModal}
-              onHoverButton={onHoverButton}
-              castShadow
-              recieveShadow
-              position={[2.38, 0.8, 3]}
-              rotation={[1.58, 0, -3.5]}
-              scale={0.4}
-            />
-            <Email3D
-              onHoverEmail={onHoverEmail}
-              openInNewTab={openInNewTab}
-              castShadow
-              recieveShadow
-              position={[-2.8, 0.8, 3.7]}
-              rotation={[1.5, 0, 3.7]}
-              scale={1}
-            />
-            <Linkedin3D
-              onHoverLinkedin={onHoverLinkedin}
-              openInNewTab={openInNewTab}
-              castShadow
-              recieveShadow
-              position={[-3.2, 0.79, 3.4]}
-              rotation={[1.5, 0, 3.7]}
-              scale={0.4}
-            />
-            <fogExp2 attach="fog" color="darkorange" density={0.03} />
-            <EffectComposer autoClear={false}>
-              <Outline
-                selection={selectedButton}
-                visibleEdgeColor="red"
-                edgeStrength={2}
-                blendFunction={BlendFunction.SCREEN}
-                blur={true}
-              />
-              <Outline
-                selection={selectedEmail}
-                visibleEdgeColor="red"
-                edgeStrength={2}
-                blendFunction={BlendFunction.SCREEN}
-                blur={true}
-              />
-              <Outline
-                selection={selectedLinkedin}
-                visibleEdgeColor="blue"
-                edgeStrength={2}
-                blendFunction={BlendFunction.SCREEN}
-                blur={true}
-              />
-              <DepthOfField
-                focusDistance={0} // where to focus
-                focalLength={0.1} // focal length
-                bokehScale={0.5} // bokeh size
-                blendFunction={BlendFunction.Screen}
-              />
-              {/* <SelectiveBloom
+            <SelectiveBloom
+              lights={[lightRef]}
               selection={selectedButton}
-              intensity={1}
+              intensity={5}
               luminanceThreshold={0.08}
               luminanceSmoothing={0.025}
-            /> */}
-            </EffectComposer>
-          </Suspense>
+            />
+          </EffectComposer>
         </Canvas>
-      </>
+      </Suspense>
     </div>
   );
 }

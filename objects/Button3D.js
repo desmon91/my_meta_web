@@ -13,10 +13,10 @@ export default function Button3D({ onHoverButton, hideModal, ...props }) {
     <group
       {...props}
       dispose={null}
-      onPointerOver={() => {
+      onPointerEnter={() => {
         onHoverButton([textRef]);
       }}
-      onPointerOut={() => {
+      onPointerLeave={() => {
         onHoverButton(null);
       }}
       onClick={() => hideModal(false)}

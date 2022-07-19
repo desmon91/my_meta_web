@@ -1,21 +1,18 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import React, { Suspense, useRef, useEffect, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 
 import AboutModal from "../components/AboutModal";
 import ProjectModal from "../components/ProjectModal";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import {
   AdaptiveDpr,
   AdaptiveEvents,
   Environment,
-  FirstPersonControls,
-  MeshReflectorMaterial,
   OrbitControls,
   PerspectiveCamera,
   Preload,
-  PresentationControls,
   Shadow,
   Sky,
   Stars,
@@ -34,11 +31,10 @@ import Linkedin3D from "../objects/Linkedin3D";
 import {
   DepthOfField,
   EffectComposer,
-  Outline,
   SelectiveBloom,
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import { Blending } from "three";
+import MyLoader from "../components/MyLoader";
 
 export default function Home(props) {
   const lightRef = useRef();
@@ -64,7 +60,7 @@ export default function Home(props) {
       <ProjectModal hideModal={hideProjectModal} showModal={showProjectModal} />
       {/* canvas area */}
 
-      <Suspense fallback={<span>loading...</span>}>
+      <Suspense fallback={<MyLoader />}>
         <Canvas
           style={{
             width: "100vw",
@@ -92,7 +88,7 @@ export default function Home(props) {
             mieDirectionalG={0}
           />
           <Stars
-            radius={80}
+            radius={35}
             depth={50}
             count={5000}
             factor={4}
@@ -116,14 +112,15 @@ export default function Home(props) {
             minPolarAngle={1.5}
             //for rotating camera up or down in x,y,z
             target={[0, 1.5, 0]}
-            enableDamping={false}
+            enableDamping={true}
+            dampingFactor={0.5}
             regress
           />
 
           <PerspectiveCamera
             makeDefault
             //this is for moving camera position up or down in x,y,z
-
+            far={100}
             position={[0, 3, 0]}
           />
 
@@ -135,21 +132,21 @@ export default function Home(props) {
             intensity={0.1}
             sphereSize={2}
             castShadow
-            color="lighyellow"
+            color="lightyellow"
           />
           <MyPointLight
             position={[5.5, 8, 6]}
             intensity={0.1}
             sphereSize={2}
             castShadow
-            color="lighyellow"
+            color="lightyellow"
           />
           <MyPointLight
             position={[13, 8, -6.5]}
             intensity={0.1}
             sphereSize={2}
             castShadow
-            color="lighyellow"
+            color="lightyellow"
           />
           <City3D scale={2} position={[0, -0.55, -4]} rotation={[0, -2, 0]} />
 
@@ -196,7 +193,8 @@ export default function Home(props) {
             rotation={[1.5, 0, 3.7]}
             scale={0.4}
           />
-          <fogExp2 attach="fog" color="darkorange" density={0.03} />
+          <fogExp2 attach="fog" color="#00222E" density={0.04} />
+
           <EffectComposer autoClear={false}>
             <DepthOfField
               focusDistance={0} // where to focus

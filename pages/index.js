@@ -57,7 +57,11 @@ export default function Home(props) {
       </Head>
       {/* modal area */}
       <AboutModal hideModal={hideAboutModal} showModal={showAboutModal} />
-      <ProjectModal hideModal={hideProjectModal} showModal={showProjectModal} />
+      <ProjectModal
+        hideModal={hideProjectModal}
+        showModal={showProjectModal}
+        openInNewTab={openInNewTab}
+      />
       {/* canvas area */}
 
       <Suspense fallback={<MyLoader />}>

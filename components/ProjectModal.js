@@ -1,4 +1,4 @@
-export default function ProjectModal({ hideModal, showModal }) {
+export default function ProjectModal({ hideModal, showModal, openInNewTab }) {
   return (
     <div
       class="relative z-10 absolute top-0 left-0"
@@ -59,7 +59,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/motix")}
+                >
                   Case Study
                 </button>
               </div>
@@ -74,7 +77,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/diy")}
+                >
                   Case Study
                 </button>
               </div>
@@ -90,7 +96,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/talen")}
+                >
                   Case Study
                 </button>
               </div>
@@ -106,7 +115,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/hdm")}
+                >
                   Case Study
                 </button>
               </div>
@@ -124,7 +136,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/esimper")}
+                >
                   Case Study
                 </button>
               </div>
@@ -142,7 +157,10 @@ export default function ProjectModal({ hideModal, showModal }) {
                 </div>
               </div>
               <div>
-                <button class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500">
+                <button
+                  class="text-orange-500 p-2 hover:text-gray-500 hover:border-gray-500 border-2 rounded-lg border-orange-500"
+                  onClick={() => openInNewTab("/project/iremember")}
+                >
                   Case Study
                 </button>
               </div>

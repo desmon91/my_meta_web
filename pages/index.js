@@ -40,8 +40,8 @@ export default function Home(props) {
   const lightRef = useRef();
   const [hoveredButton, onHoverButton] = useState(null);
   const selectedButton = hoveredButton ? hoveredButton : undefined;
-  const [showAboutModal, hideAboutModal] = useState(true);
-  const [showProjectModal, hideProjectModal] = useState(true);
+  const [hideAboutModal, setHideAboutModal] = useState(true);
+  const [hideProjectModal, setHideProjectModal] = useState(true);
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -56,10 +56,10 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* modal area */}
-      <AboutModal hideModal={hideAboutModal} showModal={showAboutModal} />
+      <AboutModal hideModal={hideAboutModal} setHideModal={setHideAboutModal} />
       <ProjectModal
         hideModal={hideProjectModal}
-        showModal={showProjectModal}
+        setHideModal={setHideProjectModal}
         openInNewTab={openInNewTab}
       />
       {/* canvas area */}
@@ -69,6 +69,7 @@ export default function Home(props) {
           style={{
             width: "100vw",
             height: "100vh",
+            position: "fixed",
           }}
           frameloop="demand"
           performance={{ min: 0.1 }}
@@ -161,7 +162,7 @@ export default function Home(props) {
           <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
           <Button3D
             name="about-button"
-            hideModal={hideAboutModal}
+            hideModal={setHideAboutModal}
             onHoverButton={onHoverButton}
             castShadow
             recieveShadow
@@ -171,7 +172,7 @@ export default function Home(props) {
           />
           <Button3D
             name="project-button"
-            hideModal={hideProjectModal}
+            hideModal={setHideProjectModal}
             onHoverButton={onHoverButton}
             castShadow
             recieveShadow

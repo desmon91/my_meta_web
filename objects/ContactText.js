@@ -12,7 +12,7 @@ export default function ContactText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[-1, 2.2, 6]}
+        position={[-1.5, 2.2, 6]}
         rotation={[0, 3, 0]}
         anchorX={"left"}
         name="wtxt"
@@ -26,7 +26,7 @@ export default function ContactText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[-1, 1.6, 6]}
+        position={[-1.5, 1.6, 6]}
         rotation={[0, 3, 0]}
         anchorX={"left"}
         className="wtxt"

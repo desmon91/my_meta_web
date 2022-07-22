@@ -30,6 +30,7 @@ import Button3D from "../objects/Button3D";
 import Email3D from "../objects/Email3D";
 import Linkedin3D from "../objects/Linkedin3D";
 import MyLoader from "../components/MyLoader";
+import Terrain from "../objects/Terrain";
 const WelcomeModal = React.lazy(() => import("../components/WelcomeModal"));
 const Footer360 = React.lazy(() => import("../components/Footer360"));
 
@@ -90,7 +91,7 @@ export default function Home(props) {
           <AdaptiveEvents />
           {/* Helper component */}
           {/* <Stats /> */}
-          <gridHelper args={[50, 50]} />
+          {/* <gridHelper args={[50, 50]} /> */}
           {/* <axesHelper /> */}
           {/* Sky component */}
           <Sky
@@ -143,7 +144,7 @@ export default function Home(props) {
             castShadow
           />
           <ambientLight color={"lightblue"} intensity={0.5} />
-
+          <Terrain scale={1.5} />
           <WelcomeText />
           <AboutText />
           <ProjectText />
@@ -173,14 +174,14 @@ export default function Home(props) {
           <Email3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            position={[-1.2, 0.8, 5.7]}
+            position={[-1.7, 0.8, 5.7]}
             rotation={[1.6, 0, 3.5]}
             scale={1}
           />
           <Linkedin3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            position={[-1.8, 0.79, 5.8]}
+            position={[-2.4, 0.79, 5.8]}
             rotation={[1.6, 0, 3.5]}
             scale={0.4}
           />

@@ -117,7 +117,13 @@ export default function diy() {
             Andy is a safety officer who needs to find high quality DIY
             tutorials because he wants to finish his DIY projects.
           </p>
-          <Image alt="" src="/diy_persona.jpg" className="w-full h-full my-5" />
+          <Image
+            width="100%"
+            height="100%"
+            alt=""
+            src="/diy_persona.jpg"
+            className="w-full h-full my-5"
+          />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
@@ -130,6 +136,8 @@ export default function diy() {
             tools to find good tutorials online.
           </p>
           <Image
+            width="100%"
+            height="100%"
             alt=""
             src="/diy_user_journey.jpg"
             className="w-full h-full my-5"
@@ -143,7 +151,13 @@ export default function diy() {
         </h3>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image alt="" src="/diy0.png" className="w-auto h-auto p-5" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/diy0.png"
+              className="w-auto h-auto p-5"
+            />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Home Screen
             </h6>
@@ -183,7 +197,13 @@ export default function diy() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image alt="" src="/diy1.png" className="w-auto h-auto" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/diy1.png"
+              className="w-auto h-auto"
+            />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -221,7 +241,13 @@ export default function diy() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <Image alt="" src="/diy2.png" className="w-full h-full p-5 mt-5" />
+        <Image
+          width="100%"
+          height="100%"
+          alt=""
+          src="/diy2.png"
+          className="w-full h-full p-5 mt-5"
+        />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

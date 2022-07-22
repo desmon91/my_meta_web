@@ -125,7 +125,13 @@ export default function hdm() {
             make a report to the government so that he can fulfill government
             compliance.
           </p>
-          <Image alt="" src="/hdm_persona.jpg" className="w-full h-full my-5" />
+          <Image
+            width="100%"
+            height="100%"
+            alt=""
+            src="/hdm_persona.jpg"
+            className="w-full h-full my-5"
+          />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
@@ -138,6 +144,8 @@ export default function hdm() {
             Database Management will be a great help
           </p>
           <Image
+            width="100%"
+            height="100%"
             alt=""
             src="/hdm_user_journey.png"
             className="w-full h-full my-5"
@@ -154,7 +162,13 @@ export default function hdm() {
         </p>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image alt="" src="/hdm0.png" className="w-auto h-auto p-5" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/hdm0.png"
+              className="w-auto h-auto p-5"
+            />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Login Screen
             </h6>
@@ -164,7 +178,13 @@ export default function hdm() {
             </p>
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image alt="" src="/hdm1.png" className="w-auto h-auto p-5" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/hdm1.png"
+              className="w-auto h-auto p-5"
+            />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Submit Screen
             </h6>
@@ -217,7 +237,13 @@ export default function hdm() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image alt="" src="/hdm2.png" className="w-auto h-auto" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/hdm2.png"
+              className="w-auto h-auto"
+            />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -234,7 +260,13 @@ export default function hdm() {
             </p>
           </div>
           <div className="w-1/3 m-5">
-            <Image alt="" src="/hdm3.png" className="w-auto h-auto" />
+            <Image
+              width="100%"
+              height="100%"
+              alt=""
+              src="/hdm3.png"
+              className="w-auto h-auto"
+            />
           </div>
         </div>
       </section>

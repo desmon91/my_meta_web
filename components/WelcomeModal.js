@@ -4,14 +4,17 @@ export default function WelcomeModal({ hideModal, setHideModal, setWaveHand }) {
   const modalTransition = useTransition(!hideModal, {
     from: {
       opacity: 0,
+      display: "none",
       transform: `translate3d(0px, -30px, 0px)`,
     },
     enter: {
       opacity: 1,
+      display: "block",
       transform: `translate3d(0px, 0px, 0px)`,
     },
     leave: {
       opacity: 0,
+      display: "none",
       transform: `translate3d(0px, -30px, 0px)`,
       delay: 200,
     },

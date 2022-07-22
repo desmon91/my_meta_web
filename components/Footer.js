@@ -8,7 +8,13 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src={"/linkedin.svg"} alt="Linkedin" className="w-5 h-5 m-2" />
+          <Image
+            width="100%"
+            height="100%"
+            src={"/linkedin.svg"}
+            alt="Linkedin"
+            className="w-5 h-5 m-2"
+          />
         </a>
         <a
           href="https://www.instagram.com/desmondsiahaan/"
@@ -16,6 +22,8 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <Image
+            width="100%"
+            height="100%"
             src={"/instagram.svg"}
             alt="Instagram"
             className="w-5 h-5 m-2"
@@ -26,7 +34,13 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src={"/email.svg"} alt="Email" className="w-5 h-5 m-2" />
+          <Image
+            width="100%"
+            height="100%"
+            src={"/email.svg"}
+            alt="Email"
+            className="w-5 h-5 m-2"
+          />
         </a>
       </div>
       <div className="w-1/2 text-center">©2022 Made by Desmond Kristian</div>

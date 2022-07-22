@@ -64,6 +64,8 @@ export default function AboutModal({ hideModal, setHideModal }) {
                 {/* image profile */}
                 <div className="mt-5 min-w-sm min-h-sm max-w-lg max-h-lg">
                   <Image
+                    width="100%"
+                    height="100%"
                     alt=""
                     className="rounded-full"
                     src={profilePic}

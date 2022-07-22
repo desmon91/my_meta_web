@@ -17,6 +17,7 @@ import {
   Sky,
   Stars,
   Stats,
+  useProgress,
 } from "@react-three/drei";
 import MyPointLight from "../objects/MyPointLight";
 
@@ -37,12 +38,19 @@ export default function Home(props) {
   const [hoveredButton, onHoverButton] = useState(null);
   const [hideAboutModal, setHideAboutModal] = useState(true);
   const [hideProjectModal, setHideProjectModal] = useState(true);
-  const [hideWelcomeModal, setHideWelcomeModal] = useState(false);
+  const [hideWelcomeModal, setHideWelcomeModal] = useState(true);
   const [waveHand, setWaveHand] = useState(false);
+  const { active, progress, errors, item, loaded, total } = useProgress();
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
+
+  useEffect(() => {
+    if (!active) {
+      setHideWelcomeModal(false);
+    }
+  }, [progress]);
 
   return (
     <div className={styles.container}>
@@ -60,14 +68,14 @@ export default function Home(props) {
         setHideModal={setHideProjectModal}
         openInNewTab={openInNewTab}
       />
+      <WelcomeModal
+        hideModal={hideWelcomeModal}
+        setHideModal={setHideWelcomeModal}
+        setWaveHand={setWaveHand}
+      />
       {/* canvas area */}
 
       <Suspense fallback={<MyLoader />}>
-        <WelcomeModal
-          hideModal={hideWelcomeModal}
-          setHideModal={setHideWelcomeModal}
-          setWaveHand={setWaveHand}
-        />
         <Canvas
           style={{
             width: "100vw",

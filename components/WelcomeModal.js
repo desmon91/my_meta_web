@@ -18,7 +18,7 @@ export default function WelcomeModal({ hideModal, setHideModal, setWaveHand }) {
       transform: `translate3d(0px, -30px, 0px)`,
       delay: 200,
     },
-    delay: 200, //delay in 1second
+    delay: 2000, //delay in 1second
   });
 
   return modalTransition(

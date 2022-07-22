@@ -4,15 +4,19 @@ export default function AboutModal({ hideModal, setHideModal }) {
   const modalTransition = useTransition(!hideModal, {
     from: {
       opacity: 0,
+      display: "none",
       transform: `translate3d(0px, -30px, 0px)`,
     },
     enter: {
       opacity: 1,
+      display: "block",
       transform: `translate3d(0px, 0px, 0px)`,
     },
     leave: {
       opacity: 0,
+      display: "none",
       transform: `translate3d(0px, -30px, 0px)`,
+      delay: 200,
     },
     delay: 200,
   });

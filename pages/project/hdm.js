@@ -126,6 +126,8 @@ export default function hdm() {
             compliance.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -144,6 +146,8 @@ export default function hdm() {
             Database Management will be a great help
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -163,6 +167,8 @@ export default function hdm() {
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -179,6 +185,8 @@ export default function hdm() {
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -238,6 +246,8 @@ export default function hdm() {
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -261,6 +271,8 @@ export default function hdm() {
           </div>
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""

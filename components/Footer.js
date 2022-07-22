@@ -9,8 +9,8 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <Image
-            width="100%"
-            height="100%"
+            width="20px"
+            height="20px"
             src={"/linkedin.svg"}
             alt="Linkedin"
             className="w-5 h-5 m-2"
@@ -22,8 +22,8 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <Image
-            width="100%"
-            height="100%"
+            width="20px"
+            height="20px"
             src={"/instagram.svg"}
             alt="Instagram"
             className="w-5 h-5 m-2"
@@ -35,8 +35,8 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <Image
-            width="100%"
-            height="100%"
+            width="20px"
+            height="20px"
             src={"/email.svg"}
             alt="Email"
             className="w-5 h-5 m-2"

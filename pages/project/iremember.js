@@ -118,6 +118,8 @@ export default function esimper() {
             avoid any sanction from the government.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -137,6 +139,8 @@ export default function esimper() {
             help for Norman.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -156,6 +160,8 @@ export default function esimper() {
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -173,6 +179,8 @@ export default function esimper() {
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -220,6 +228,8 @@ export default function esimper() {
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -241,6 +251,8 @@ export default function esimper() {
           </div>
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""

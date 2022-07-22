@@ -122,6 +122,8 @@ export default function motix() {
             kids without worry.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -140,6 +142,8 @@ export default function motix() {
             app will be a great help.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -158,6 +162,8 @@ export default function motix() {
             screen that will complete user flow to buy tickets.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -173,6 +179,8 @@ export default function motix() {
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -189,6 +197,8 @@ export default function motix() {
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -246,6 +256,8 @@ export default function motix() {
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -268,6 +280,8 @@ export default function motix() {
           </div>
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -278,6 +292,8 @@ export default function motix() {
 
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -331,13 +347,17 @@ export default function motix() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <Image
-          width="100%"
-          height="100%"
-          alt=""
-          src="/motix4.png"
-          className="w-full h-full p-5 mt-5"
-        />
+        <div className="w-full m-5">
+          <Image
+            layout="responsive"
+            objectFit="contain"
+            width="100%"
+            height="100%"
+            alt=""
+            src="/motix4.png"
+            className="w-auto h-auto"
+          />
+        </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

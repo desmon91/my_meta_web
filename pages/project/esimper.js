@@ -115,6 +115,8 @@ export default function esimper() {
             quickly so that she can start doing his field inspection job.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -133,6 +135,8 @@ export default function esimper() {
             Simper process through an app will be a great help for Nanda.
           </p>
           <Image
+            layout="responsive"
+            objectFit="contain"
             width="100%"
             height="100%"
             alt=""
@@ -152,6 +156,8 @@ export default function esimper() {
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -169,6 +175,8 @@ export default function esimper() {
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -232,6 +240,8 @@ export default function esimper() {
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""
@@ -255,6 +265,8 @@ export default function esimper() {
           </div>
           <div className="w-1/3 m-5">
             <Image
+              layout="responsive"
+              objectFit="contain"
               width="100%"
               height="100%"
               alt=""

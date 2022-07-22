@@ -19,6 +19,9 @@ export default function Linkedin3D({ onHoverButton, openInNewTab, ...props }) {
       onClick={() =>
         openInNewTab("https://www.linkedin.com/in/desmond-kristian-84aa92129/")
       }
+      onTouchStart={() =>
+        openInNewTab("https://www.linkedin.com/in/desmond-kristian-84aa92129/")
+      }
     >
       <mesh
         ref={outlineRef}

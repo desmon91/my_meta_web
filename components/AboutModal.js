@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { animated, useTransition } from "react-spring";
-import profilePic from "../public/profile_closeup.JPG";
 
 export default function AboutModal({ hideModal, setHideModal }) {
   const modalTransition = useTransition(!hideModal, {
@@ -62,15 +60,11 @@ export default function AboutModal({ hideModal, setHideModal }) {
                   </button>
                 </div>
                 {/* image profile */}
-                <div className="mt-5 min-w-sm min-h-sm max-w-lg max-h-lg">
-                  <Image
-                    layout="responsive"
-                    objectFit="contain"
-                    width="100%"
-                    height="100%"
+                <div className="my-5 flex justify-center w-full h-full">
+                  <img
                     alt=""
-                    className="rounded-full"
-                    src={profilePic}
+                    className="rounded-full w-32 h-32"
+                    src={"/profile_closeup.jpg"}
                   />
                 </div>
                 <h3 className="text-3xl font-semibold text-orange-500">

@@ -86,7 +86,7 @@ export default function Home(props) {
         >
           {/* Performance component */}
           <Preload all />
-          <AdaptiveDpr pixelated />
+          {/* <AdaptiveDpr pixelated /> */}
           <AdaptiveEvents />
           {/* Helper component */}
           {/* <Stats /> */}
@@ -149,7 +149,7 @@ export default function Home(props) {
           <ProjectText />
           <ContactText />
           <Avatar
-            position={[0, 0, -2]}
+            position={[0, 0, -2.5]}
             rotation={[0, 0, 0]}
             waveHand={waveHand}
             setWaveHand={setWaveHand}
@@ -158,7 +158,7 @@ export default function Home(props) {
             name="about-button"
             hideModal={setHideAboutModal}
             onHoverButton={onHoverButton}
-            position={[2.8, 0.8, -0.6]}
+            position={[4.5, 0.8, -1.6]}
             rotation={[1.58, 0, 1.5]}
             scale={0.4}
           />
@@ -166,22 +166,22 @@ export default function Home(props) {
             name="project-button"
             hideModal={setHideProjectModal}
             onHoverButton={onHoverButton}
-            position={[2.38, 0.8, 3]}
+            position={[3.38, 0.8, 4]}
             rotation={[1.58, 0, -3.5]}
             scale={0.4}
           />
           <Email3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            position={[-2.8, 0.8, 3.7]}
-            rotation={[1.5, 0, 3.7]}
+            position={[-1.2, 0.8, 5.7]}
+            rotation={[1.6, 0, 3.5]}
             scale={1}
           />
           <Linkedin3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            position={[-3.2, 0.79, 3.4]}
-            rotation={[1.5, 0, 3.7]}
+            position={[-1.8, 0.79, 5.8]}
+            rotation={[1.6, 0, 3.5]}
             scale={0.4}
           />
           <fogExp2 attach="fog" color="orange" density={0.04} />

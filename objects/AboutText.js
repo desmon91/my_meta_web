@@ -9,7 +9,7 @@ export default function AboutText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[2.8, 2.2, -1.2]}
+        position={[4, 2.2, -2]}
         rotation={[0, -1.5, 0]}
         anchorX={"left"}
       >
@@ -22,7 +22,7 @@ export default function AboutText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[2.8, 1.6, -1.2]}
+        position={[4, 1.6, -2]}
         rotation={[0, -1.5, 0]}
         anchorX={"left"}
       >

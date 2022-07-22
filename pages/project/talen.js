@@ -244,7 +244,7 @@ export default function talen() {
           Refined Designs
         </h3>
 
-        <img alt="" src="/talen3.png" className="w-auto h-auto my-5" />
+        <img alt="" src="/talen3.png" className="w-auto h-auto my-10" />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

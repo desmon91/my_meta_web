@@ -292,7 +292,7 @@ export default function motix() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <img alt="" src="/motix4.png" className="w-auto h-auto my-5" />
+        <img alt="" src="/motix4.png" className="w-auto h-auto my-10" />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

@@ -9,7 +9,7 @@ export default function ProjectText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[3, 2.2, 2.8]}
+        position={[4, 2.2, 3.8]}
         rotation={[0, 3.5, 0]}
         anchorX={"left"}
       >
@@ -22,7 +22,7 @@ export default function ProjectText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[3, 1.6, 2.8]}
+        position={[4, 1.6, 3.8]}
         rotation={[0, 3.5, 0]}
         anchorX={"left"}
       >

@@ -13,8 +13,8 @@ export default function WelcomeText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[-4, 2.45, 1]}
-        rotation={[0, 1.2, 0]}
+        position={[-6, 2.45, 1]}
+        rotation={[0, 1.5, 0]}
         anchorX={"left"}
         name="wtxt"
       >
@@ -26,8 +26,8 @@ export default function WelcomeText() {
         outlineColor={"black"}
         outlineWidth={0.01}
         fontSize={0.6}
-        position={[-4, 1.85, 1]}
-        rotation={[0, 1.2, 0]}
+        position={[-6, 1.85, 1]}
+        rotation={[0, 1.5, 0]}
         anchorX={"left"}
         className="wtxt"
       >
@@ -38,8 +38,8 @@ export default function WelcomeText() {
         outlineColor={"black"}
         outlineWidth={0.01}
         fontSize={0.6}
-        position={[-4, 1.25, 1]}
-        rotation={[0, 1.2, 0]}
+        position={[-6, 1.25, 1]}
+        rotation={[0, 1.5, 0]}
         anchorX={"left"}
         className="wtxt"
       >
@@ -51,8 +51,8 @@ export default function WelcomeText() {
         outlineWidth={0.01}
         castShadow
         fontSize={0.6}
-        position={[-4, 0.65, 1]}
-        rotation={[0, 1.2, 0]}
+        position={[-6, 0.65, 1]}
+        rotation={[0, 1.5, 0]}
         anchorX={"left"}
         className="wtxt"
       >

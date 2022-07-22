@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
 export default function esimper() {
   return (
     <div className="mb-10">
@@ -117,11 +116,7 @@ export default function esimper() {
             company permits status so the company can comply with the laws and
             avoid any sanction from the government.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/iremember_persona.jpg"
             className="w-full h-full my-5"
@@ -138,11 +133,7 @@ export default function esimper() {
             permits compliance management process through an app will be a great
             help for Norman.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/iremember_user_journey.jpg"
             className="w-full h-full my-5"
@@ -159,15 +150,7 @@ export default function esimper() {
         </p>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/iremember0.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/iremember0.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Renewal Screen
             </h6>
@@ -178,15 +161,7 @@ export default function esimper() {
             </p>
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/iremember1.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/iremember1.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Add Permit Screen
             </h6>
@@ -227,15 +202,7 @@ export default function esimper() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/iremember2.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/iremember2.png" className="w-auto h-auto" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -250,15 +217,7 @@ export default function esimper() {
             </p>
           </div>
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/iremember3.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/iremember3.png" className="w-auto h-auto" />
           </div>
         </div>
       </section>

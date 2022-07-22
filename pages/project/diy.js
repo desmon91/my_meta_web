@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
+
 export default function diy() {
   return (
     <div className="mb-10">
@@ -117,15 +117,7 @@ export default function diy() {
             Andy is a safety officer who needs to find high quality DIY
             tutorials because he wants to finish his DIY projects.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/diy_persona.jpg"
-            className="w-full h-full my-5"
-          />
+          <img alt="" src="/diy_persona.jpg" className="w-full h-full my-5" />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
@@ -137,11 +129,7 @@ export default function diy() {
             By looking at a journey map we can see that the users need a better
             tools to find good tutorials online.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/diy_user_journey.jpg"
             className="w-full h-full my-5"
@@ -155,15 +143,7 @@ export default function diy() {
         </h3>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/diy0.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/diy0.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Home Screen
             </h6>
@@ -203,15 +183,7 @@ export default function diy() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/diy1.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/diy1.png" className="w-auto h-auto my-5" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -249,17 +221,8 @@ export default function diy() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <div className="w-full m-5">
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/diy2.png"
-            className="w-auto h-auto"
-          />
-        </div>
+
+        <img alt="" src="/diy2.png" className="w-auto h-auto my-5" />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

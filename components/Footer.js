@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="w-screen h-20 my-10 flex flex-col justify-center items-center">
@@ -43,7 +44,9 @@ export default function Footer() {
           />
         </a>
       </div>
-      <div className="w-1/2 text-center">©2022 Made by Desmond Kristian</div>
+      <Link href="/" className="w-1/2 text-center text-orange-500">
+        ©2022 Made by Desmond Kristian
+      </Link>
     </div>
   );
 }

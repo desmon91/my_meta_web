@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
 export default function esimper() {
   return (
     <div className="mb-10">
@@ -114,11 +113,7 @@ export default function esimper() {
             As a safety officer, Nanda wants to process the Simper request
             quickly so that she can start doing his field inspection job.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/esimper_persona.jpg"
             className="w-full h-full my-5"
@@ -134,11 +129,7 @@ export default function esimper() {
             By looking at a journey map we can see that digitalization of the
             Simper process through an app will be a great help for Nanda.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/esimper_user_journey.jpg"
             className="w-full h-full my-5"
@@ -155,15 +146,7 @@ export default function esimper() {
         </p>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/esimper0.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/esimper0.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Home Screen
             </h6>
@@ -174,15 +157,7 @@ export default function esimper() {
             </p>
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/esimper1.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/esimper1.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Administration Screen
             </h6>
@@ -239,15 +214,7 @@ export default function esimper() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/esimper2.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/esimper2.png" className="w-auto h-auto" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -264,15 +231,7 @@ export default function esimper() {
             </p>
           </div>
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/esimper3.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/esimper3.png" className="w-auto h-auto" />
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
 export default function motix() {
   return (
     <div className="mb-10">
@@ -121,15 +120,8 @@ export default function motix() {
             and buy a ticket in advance so that she can watch the movie with my
             kids without worry.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/motix_persona.jpg"
-            className="w-full h-full my-5"
-          />
+
+          <img alt="" src="/motix_persona.jpg" className="w-full h-full my-5" />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
@@ -141,11 +133,7 @@ export default function motix() {
             By looking at a journey map we can see that a mobile movie ticket
             app will be a great help.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/motix_user_journey.jpg"
             className="w-full h-full my-5"
@@ -161,11 +149,8 @@ export default function motix() {
             Paper wireframes contain 5 versions of the home page and another
             screen that will complete user flow to buy tickets.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+
+          <img
             alt=""
             src="/motix_paper_wireframe.jpg"
             className="w-full h-full my-5"
@@ -178,15 +163,7 @@ export default function motix() {
         </h3>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/motix0.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/motix0.png" className="w-auto h-auto my-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Home Screen
             </h6>
@@ -196,15 +173,7 @@ export default function motix() {
             </p>
           </div>
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/motix1.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/motix1.png" className="w-auto h-auto my-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Payment Screen
             </h6>
@@ -255,15 +224,7 @@ export default function motix() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/motix1b.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/motix1b.png" className="w-auto h-auto my-5" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -279,27 +240,11 @@ export default function motix() {
             </p>
           </div>
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/motix2.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/motix2.png" className="w-auto h-auto my-5" />
           </div>
 
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/motix3.jpg"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/motix3.jpg" className="w-auto h-auto my-5" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -347,17 +292,7 @@ export default function motix() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <div className="w-full m-5">
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/motix4.png"
-            className="w-auto h-auto"
-          />
-        </div>
+        <img alt="" src="/motix4.png" className="w-auto h-auto my-5" />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

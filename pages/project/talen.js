@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
 export default function talen() {
   return (
     <div className="mb-10">
@@ -109,15 +108,7 @@ export default function talen() {
             the language to English because he works in an English environment
             and has to finish all of his co-workers requests.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/talen_persona.jpg"
-            className="w-full h-full my-5"
-          />
+          <img alt="" src="/talen_persona.jpg" className="w-full h-full my-5" />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
@@ -129,11 +120,7 @@ export default function talen() {
             By looking at the journey map we can see that the user is stumbled
             right at the first action.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/talen_user_journey.jpg"
             className="w-full h-full my-5"
@@ -151,11 +138,7 @@ export default function talen() {
             problem. My focus was specifically on translating text from image
             and voices.
           </p>
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
+          <img
             alt=""
             src="/talen_paper_wireframe.jpg"
             className="w-full h-full my-5"
@@ -168,15 +151,7 @@ export default function talen() {
         </h3>
         <div className="w-4/5 flex flex-row justify-around items-start">
           <div className="w-1/3 m-5 flex flex-col justify-center ">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/talen0.png"
-              className="w-auto h-auto p-5"
-            />
+            <img alt="" src="/talen0.png" className="w-auto h-auto p-5" />
             <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
               Translate Screen
             </h6>
@@ -221,15 +196,7 @@ export default function talen() {
         </h3>
         <div className="w-4/5 flex flex-row flex-wrap justify-around mt-5 items-center">
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/talen1.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/talen1.png" className="w-auto h-auto my-5" />
           </div>
           <div className="w-1/3 m-5">
             <p className="text-justify text-slate-700">
@@ -244,15 +211,7 @@ export default function talen() {
             </p>
           </div>
           <div className="w-1/3 m-5">
-            <Image
-              layout="responsive"
-              objectFit="contain"
-              width="100%"
-              height="100%"
-              alt=""
-              src="/talen2.png"
-              className="w-auto h-auto"
-            />
+            <img alt="" src="/talen2.png" className="w-auto h-auto my-5" />
           </div>
         </div>
       </section>
@@ -284,17 +243,8 @@ export default function talen() {
         <h3 className="text-4xl text-orange-500 font-bold text-center">
           Refined Designs
         </h3>
-        <div className="w-full m-5">
-          <Image
-            layout="responsive"
-            objectFit="contain"
-            width="100%"
-            height="100%"
-            alt=""
-            src="/talen3.png"
-            className="w-auto h-auto"
-          />
-        </div>
+
+        <img alt="" src="/talen3.png" className="w-auto h-auto my-5" />
       </section>
       <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
         <h3 className="text-4xl text-orange-500 font-bold text-center">

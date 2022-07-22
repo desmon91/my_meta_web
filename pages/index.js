@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 
 import AboutModal from "../components/AboutModal";
 import ProjectModal from "../components/ProjectModal";
@@ -19,7 +19,7 @@ import {
   Stats,
 } from "@react-three/drei";
 import MyPointLight from "../objects/MyPointLight";
-import City3D from "../objects/City3D";
+
 import AboutText from "../objects/AboutText";
 import WelcomeText from "../objects/WelcomeText";
 import ProjectText from "../objects/ProjectText";
@@ -28,20 +28,17 @@ import Avatar from "../objects/Avatar";
 import Button3D from "../objects/Button3D";
 import Email3D from "../objects/Email3D";
 import Linkedin3D from "../objects/Linkedin3D";
-import {
-  DepthOfField,
-  EffectComposer,
-  SelectiveBloom,
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import MyLoader from "../components/MyLoader";
+const WelcomeModal = React.lazy(() => import("../components/WelcomeModal"));
+const Footer360 = React.lazy(() => import("../components/Footer360"));
 
 export default function Home(props) {
   const lightRef = useRef();
   const [hoveredButton, onHoverButton] = useState(null);
-  const selectedButton = hoveredButton ? hoveredButton : undefined;
   const [hideAboutModal, setHideAboutModal] = useState(true);
   const [hideProjectModal, setHideProjectModal] = useState(true);
+  const [hideWelcomeModal, setHideWelcomeModal] = useState(false);
+  const [waveHand, setWaveHand] = useState(false);
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -56,6 +53,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* modal area */}
+
       <AboutModal hideModal={hideAboutModal} setHideModal={setHideAboutModal} />
       <ProjectModal
         hideModal={hideProjectModal}
@@ -65,13 +63,17 @@ export default function Home(props) {
       {/* canvas area */}
 
       <Suspense fallback={<MyLoader />}>
+        <WelcomeModal
+          hideModal={hideWelcomeModal}
+          setHideModal={setHideWelcomeModal}
+          setWaveHand={setWaveHand}
+        />
         <Canvas
           style={{
             width: "100vw",
             height: "100vh",
             position: "fixed",
           }}
-          frameloop="demand"
           performance={{ min: 0.1 }}
         >
           {/* Performance component */}
@@ -79,16 +81,16 @@ export default function Home(props) {
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
           {/* Helper component */}
-          <Stats />
-          <gridHelper />
-          <axesHelper />
+          {/* <Stats /> */}
+          <gridHelper args={[50, 50]} />
+          {/* <axesHelper /> */}
           {/* Sky component */}
           <Sky
             distance={1000}
             turbidity={0}
             rayleigh={1000}
             azimuth={0}
-            inclination={0.5}
+            inclination={0.1}
             mieCoefficient={0}
             mieDirectionalG={0}
           />
@@ -102,21 +104,17 @@ export default function Home(props) {
             speed={1}
           />
           {/* Camera component */}
-          <Shadow
-            color="black"
-            colorStop={0}
-            opacity={0.5}
-            fog={true} // Reacts to fog (default=false)
-          />
+
           <OrbitControls
-            // enableZoom={false}
-            // enablePan={false}
+            enableZoom={false}
+            enablePan={false}
             //for locking the rotation only in sideways
             maxPolarAngle={1.5}
             //for locking the rotation only in sideways
             minPolarAngle={1.5}
             //for rotating camera up or down in x,y,z
             target={[0, 1.5, 0]}
+            rotation={[0, 0, 0]}
             enableDamping={true}
             dampingFactor={0.5}
             regress
@@ -130,42 +128,28 @@ export default function Home(props) {
           />
 
           <Environment files="moonless_golf_2k.hdr" />
-          <hemisphereLight color={"lightblue"} intensity={0.5} castShadow />
-
-          <MyPointLight
-            position={[0, 8, 22]}
-            intensity={0.1}
-            sphereSize={2}
+          <hemisphereLight
+            ref={lightRef}
+            color={"lightblue"}
+            intensity={0.5}
             castShadow
-            color="lightyellow"
           />
-          <MyPointLight
-            position={[5.5, 8, 6]}
-            intensity={0.1}
-            sphereSize={2}
-            castShadow
-            color="lightyellow"
-          />
-          <MyPointLight
-            position={[13, 8, -6.5]}
-            intensity={0.1}
-            sphereSize={2}
-            castShadow
-            color="lightyellow"
-          />
-          <City3D scale={2} position={[0, -0.55, -4]} rotation={[0, -2, 0]} />
+          <ambientLight color={"lightblue"} intensity={0.5} />
 
           <WelcomeText />
           <AboutText />
           <ProjectText />
           <ContactText />
-          <Avatar position={[1, 0, -2]} rotation={[0, -0.3, 0]} />
+          <Avatar
+            position={[0, 0, -2]}
+            rotation={[0, 0, 0]}
+            waveHand={waveHand}
+            setWaveHand={setWaveHand}
+          />
           <Button3D
             name="about-button"
             hideModal={setHideAboutModal}
             onHoverButton={onHoverButton}
-            castShadow
-            recieveShadow
             position={[2.8, 0.8, -0.6]}
             rotation={[1.58, 0, 1.5]}
             scale={0.4}
@@ -174,8 +158,6 @@ export default function Home(props) {
             name="project-button"
             hideModal={setHideProjectModal}
             onHoverButton={onHoverButton}
-            castShadow
-            recieveShadow
             position={[2.38, 0.8, 3]}
             rotation={[1.58, 0, -3.5]}
             scale={0.4}
@@ -183,8 +165,6 @@ export default function Home(props) {
           <Email3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            castShadow
-            recieveShadow
             position={[-2.8, 0.8, 3.7]}
             rotation={[1.5, 0, 3.7]}
             scale={1}
@@ -192,30 +172,28 @@ export default function Home(props) {
           <Linkedin3D
             onHoverButton={onHoverButton}
             openInNewTab={openInNewTab}
-            castShadow
-            recieveShadow
             position={[-3.2, 0.79, 3.4]}
             rotation={[1.5, 0, 3.7]}
             scale={0.4}
           />
-          <fogExp2 attach="fog" color="#00222E" density={0.04} />
+          <fogExp2 attach="fog" color="orange" density={0.04} />
 
-          <EffectComposer autoClear={false}>
-            <DepthOfField
-              focusDistance={0} // where to focus
-              focalLength={0.1} // focal length
-              bokehScale={0.5} // bokeh size
-              blendFunction={BlendFunction.Screen}
-            />
+          {/* <EffectComposer autoClear={false}>
             <SelectiveBloom
               lights={[lightRef]}
               selection={selectedButton}
-              intensity={5}
+              selectionLayer={2} // selection layer
+              intensity={1.0} // The bloom intensity.
+              blurPass={undefined} // A blur pass.
+              width={Resolution.AUTO_SIZE} // render width
+              height={Resolution.AUTO_SIZE} // render height
+              kernelSize={KernelSize.LARGE} // blur kernel size
               luminanceThreshold={0.08}
               luminanceSmoothing={0.025}
             />
-          </EffectComposer>
+          </EffectComposer> */}
         </Canvas>
+        <Footer360 />
       </Suspense>
     </div>
   );

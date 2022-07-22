@@ -31,7 +31,7 @@ export default function ProjectModal({
           style={styles}
         >
           {/* modal container */}
-          <div class="fixed z-10 inset-0 overflow-y-auto flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+          <div class="fixed z-10 inset-0 overflow-y-auto flex items-center sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
             {/* paper container */}
             <div class="fixed bg-white rounded-lg text-left overflow-auto  shadow-xl transform transition-all max-h-96 sm:my-8 sm:max-w-lg sm:w-full p-4">
               {/* content container */}
@@ -72,7 +72,7 @@ export default function ProjectModal({
                 </div>
                 {/* item container */}
 
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">
@@ -92,7 +92,7 @@ export default function ProjectModal({
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">
@@ -112,7 +112,7 @@ export default function ProjectModal({
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">
@@ -133,7 +133,7 @@ export default function ProjectModal({
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">
@@ -154,7 +154,7 @@ export default function ProjectModal({
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">
@@ -175,7 +175,7 @@ export default function ProjectModal({
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center flex-col sm:flex-row">
                   <div>
                     <div class="my-5 text-left max-w-xs">
                       <h3 class="text-xl font-semibold text-gray-700">

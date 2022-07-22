@@ -30,7 +30,7 @@ export default function AboutModal({ hideModal, setHideModal }) {
           style={styles}
         >
           {/* modal container */}
-          <div class="fixed z-10 inset-0 overflow-y-auto flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+          <div class="fixed z-10 inset-0 overflow-y-auto flex items-center sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
             {/* paper container */}
             <div class="fixed bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full p-4">
               {/* content container */}

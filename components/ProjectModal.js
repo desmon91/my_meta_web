@@ -77,7 +77,7 @@ export default function ProjectModal({
                 {/* item container */}
 
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         Motix App
@@ -97,7 +97,7 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         DIY Hub
@@ -117,7 +117,7 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         Talen App
@@ -138,7 +138,7 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         HDM App
@@ -159,7 +159,7 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         eSimper App
@@ -180,7 +180,7 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="flex justify-between items-center flex-col sm:flex-row">
-                  <div>
+                  <div className="w-full">
                     <div className="my-5 text-left max-w-xs">
                       <h3 className="text-xl font-semibold text-gray-700">
                         iRemember App

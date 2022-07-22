@@ -69,8 +69,6 @@ export default function AboutModal({ hideModal, setHideModal }) {
                     alt=""
                     className="rounded-full"
                     src={profilePic}
-                    width={"100%"}
-                    height={"100%"}
                   />
                 </div>
                 <h3 className="text-3xl font-semibold text-orange-500">

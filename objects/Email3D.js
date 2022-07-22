@@ -15,8 +15,7 @@ export default function Model({ onHoverButton, openInNewTab, ...props }) {
       dispose={null}
       onPointerOver={() => onHoverButton([iconRef])}
       onPointerOut={() => onHoverButton(null)}
-      onClick={() => openInNewTab("mailto:desmon.kristian@gmail.com")}
-      onTouchStart={() => openInNewTab("mailto:desmon.kristian@gmail.com")}
+      onPointerDown={() => openInNewTab("mailto:desmon.kristian@gmail.com")}
     >
       <mesh
         ref={iconRef}

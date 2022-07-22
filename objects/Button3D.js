@@ -24,8 +24,7 @@ export default function Button3D({ onHoverButton, hideModal, ...props }) {
         onHoverButton(null);
         textRef.current.material.color = yellow;
       }}
-      onClick={() => hideModal(false)}
-      onTouchStart={() => hideModal(false)}
+      onPointerDown={() => hideModal(false)}
     >
       <mesh
         geometry={nodes.Plane.geometry}

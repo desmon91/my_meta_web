@@ -16,10 +16,7 @@ export default function Linkedin3D({ onHoverButton, openInNewTab, ...props }) {
       dispose={null}
       onPointerOver={() => onHoverButton([outlineRef])}
       onPointerOut={() => onHoverButton(null)}
-      onClick={() =>
-        openInNewTab("https://www.linkedin.com/in/desmond-kristian-84aa92129/")
-      }
-      onTouchStart={() =>
+      onPointerDown={() =>
         openInNewTab("https://www.linkedin.com/in/desmond-kristian-84aa92129/")
       }
     >

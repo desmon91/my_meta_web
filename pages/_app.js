@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import * as ga from "../lib/ga";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

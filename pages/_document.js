@@ -24,6 +24,8 @@ export default function Document() {
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
+              'cookie_flags': 'SameSite=None;Secure',
+              'cookie_domain': 'desmond-kristian.my.id'
             });
                 `}
         </Script>

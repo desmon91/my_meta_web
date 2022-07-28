@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -11,23 +12,21 @@ export default function Document() {
         />
         <meta name="author" content="Desmond Kristian" />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <script
-          async
+        <Script
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
-              cookie_flags: 'SameSite=None;Secure'
             });
-          `,
-          }}
-        />
+                `}
+        </Script>
       </Head>
       <body>
         <Main />

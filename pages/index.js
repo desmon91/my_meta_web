@@ -5,6 +5,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 
 import AboutModal from "../components/AboutModal";
 import ProjectModal from "../components/ProjectModal";
+import CreditsModal from "../components/CreditsModal";
 import { Canvas } from "@react-three/fiber";
 import {
   AdaptiveDpr,
@@ -19,12 +20,12 @@ import {
   Stats,
   useProgress,
 } from "@react-three/drei";
-import MyPointLight from "../objects/MyPointLight";
 
 import AboutText from "../objects/AboutText";
 import WelcomeText from "../objects/WelcomeText";
 import ProjectText from "../objects/ProjectText";
 import ContactText from "../objects/ContactText";
+import CreditsText from "../objects/CreditsText";
 import Avatar from "../objects/Avatar";
 import Button3D from "../objects/Button3D";
 import Email3D from "../objects/Email3D";
@@ -39,6 +40,7 @@ export default function Home(props) {
   const [hoveredButton, onHoverButton] = useState(null);
   const [hideAboutModal, setHideAboutModal] = useState(true);
   const [hideProjectModal, setHideProjectModal] = useState(true);
+  const [hideCreditsModal, setHideCreditsModal] = useState(true);
   const [hideWelcomeModal, setHideWelcomeModal] = useState(true);
   const [waveHand, setWaveHand] = useState(false);
   const { active, progress, errors, item, loaded, total } = useProgress();
@@ -85,6 +87,10 @@ export default function Home(props) {
         hideModal={hideProjectModal}
         setHideModal={setHideProjectModal}
         openInNewTab={openInNewTab}
+      />
+      <CreditsModal
+        hideModal={hideCreditsModal}
+        setHideModal={setHideCreditsModal}
       />
       <WelcomeModal
         hideModal={hideWelcomeModal}
@@ -166,6 +172,7 @@ export default function Home(props) {
           <AboutText />
           <ProjectText />
           <ContactText />
+          <CreditsText />
           <Avatar
             position={[0, 0, -2.5]}
             rotation={[0, 0, 0]}
@@ -186,6 +193,14 @@ export default function Home(props) {
             onHoverButton={onHoverButton}
             position={[3.38, 0.8, 4]}
             rotation={[1.58, 0, -3.5]}
+            scale={0.4}
+          />
+          <Button3D
+            name="credits-button"
+            hideModal={setHideCreditsModal}
+            onHoverButton={onHoverButton}
+            position={[-7, 0.8, 0.35]}
+            rotation={[-4.72, 0, -2]}
             scale={0.4}
           />
           <Email3D

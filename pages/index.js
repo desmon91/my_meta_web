@@ -80,26 +80,28 @@ export default function Home(props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      {/* modal area */}
-
-      <AboutModal hideModal={hideAboutModal} setHideModal={setHideAboutModal} />
-      <ProjectModal
-        hideModal={hideProjectModal}
-        setHideModal={setHideProjectModal}
-        openInNewTab={openInNewTab}
-      />
-      <CreditsModal
-        hideModal={hideCreditsModal}
-        setHideModal={setHideCreditsModal}
-      />
-      <WelcomeModal
-        hideModal={hideWelcomeModal}
-        setHideModal={setHideWelcomeModal}
-        setWaveHand={setWaveHand}
-      />
-      {/* canvas area */}
 
       <Suspense fallback={<MyLoader />}>
+        {/* modal area */}
+        <AboutModal
+          hideModal={hideAboutModal}
+          setHideModal={setHideAboutModal}
+        />
+        <ProjectModal
+          hideModal={hideProjectModal}
+          setHideModal={setHideProjectModal}
+          openInNewTab={openInNewTab}
+        />
+        <CreditsModal
+          hideModal={hideCreditsModal}
+          setHideModal={setHideCreditsModal}
+        />
+        <WelcomeModal
+          hideModal={hideWelcomeModal}
+          setHideModal={setHideWelcomeModal}
+          setWaveHand={setWaveHand}
+        />
+        {/* canvas area */}
         <Canvas
           style={{
             width: "100vw",

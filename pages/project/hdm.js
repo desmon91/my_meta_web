@@ -102,7 +102,7 @@ export default function hdm() {
             User Pain Points
           </h3>
           <div className="w-4/5 flex flex-row justify-around">
-            <div className="w-1/3 m-5">
+            <div className="w-full md:w-1/3 m-5">
               <h6 className="text-lg text-center text-slate-700 font-semibold">
                 Outdated
               </h6>
@@ -110,7 +110,7 @@ export default function hdm() {
                 Users need a new relevant app to record data
               </p>
             </div>
-            <div className="w-1/3 m-5">
+            <div className="w-full md:w-1/3 m-5">
               <h6 className="text-lg text-center text-slate-700 font-semibold">
                 Feature
               </h6>
@@ -157,8 +157,8 @@ export default function hdm() {
             Digital wireframes contain an initial version of the login page and
             another screen that will complete the user flow to input the data.
           </p>
-          <div className="w-4/5 flex flex-row justify-around items-start">
-            <div className="w-1/3 m-5 flex flex-col justify-center ">
+          <div className="w-4/5 flex flex-col md:flex-row justify-around items-start">
+            <div className="w-full md:w-1/3 md:m-5 flex flex-col justify-center ">
               <img alt="" src="/hdm0.png" className="w-auto h-auto p-5" />
               <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
                 Login Screen
@@ -168,7 +168,7 @@ export default function hdm() {
                 version of the paper wireframe
               </p>
             </div>
-            <div className="w-1/3 m-5 flex flex-col justify-center ">
+            <div className="w-full md:w-1/3 md:m-5 flex flex-col justify-center ">
               <img alt="" src="/hdm1.png" className="w-auto h-auto p-5" />
               <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
                 Submit Screen
@@ -224,25 +224,29 @@ export default function hdm() {
             Prototypes
           </h3>
           <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
-            <div className="w-1/3 m-5">
-              <img alt="" src="/hdm2.png" className="w-auto h-auto" />
+            <div className="flex flex-col mb-20 justify-around md:flex-row">
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <img alt="" src="/hdm2.png" className="w-auto h-auto" />
+              </div>
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <p className="text-justify text-slate-700">
+                  In early stages of the design there was no dashboard to see
+                  the clinic data summary, so add it to make it easier for the
+                  user to see their current performance
+                </p>
+              </div>
             </div>
-            <div className="w-1/3 m-5">
-              <p className="text-justify text-slate-700">
-                In early stages of the design there was no dashboard to see the
-                clinic data summary, so add it to make it easier for the user to
-                see their current performance
-              </p>
-            </div>
-            <div className="w-1/3 m-5">
-              <p className="text-justify text-slate-700">
-                After usability study 1, there were a lot of feature request to
-                ease the users pain points, hence a couple of navigation menu
-                items get added
-              </p>
-            </div>
-            <div className="w-1/3 m-5">
-              <img alt="" src="/hdm3.png" className="w-auto h-auto" />
+            <div className="flex flex-col my:20 justify-around md:flex-row-reverse">
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <img alt="" src="/hdm3.png" className="w-auto h-auto" />
+              </div>
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <p className="text-justify text-slate-700">
+                  After usability study 1, there were a lot of feature request
+                  to ease the users pain points, hence a couple of navigation
+                  menu items get added
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -103,7 +103,7 @@ export default function esimper() {
             User Pain Points
           </h3>
           <div className="w-4/5 flex flex-row justify-around">
-            <div className="w-1/3 m-5">
+            <div className="w-full md:w-1/3 m-5">
               <h6 className="text-lg text-center text-slate-700 font-semibold">
                 Outdated
               </h6>
@@ -155,8 +155,8 @@ export default function esimper() {
             Digital wireframes contain an initial version of the login page and
             another screen that will complete the user flow to input the data.
           </p>
-          <div className="w-4/5 flex flex-row justify-around items-start">
-            <div className="w-1/3 m-5 flex flex-col justify-center ">
+          <div className="w-4/5 flex flex-col md:flex-row justify-around items-start">
+            <div className="w-full md:w-1/3 md:m-5 flex flex-col justify-center ">
               <img alt="" src="/iremember0.png" className="w-auto h-auto p-5" />
               <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
                 Renewal Screen
@@ -167,7 +167,7 @@ export default function esimper() {
                 progress.
               </p>
             </div>
-            <div className="w-1/3 m-5 flex flex-col justify-center ">
+            <div className="w-full md:w-1/3 md:m-5 flex flex-col justify-center ">
               <img alt="" src="/iremember1.png" className="w-auto h-auto p-5" />
               <h6 className="text-lg text-center text-slate-700 font-semibold mt-5">
                 Add Permit Screen
@@ -208,23 +208,27 @@ export default function esimper() {
             Prototypes
           </h3>
           <div className="w-4/5 flex flex-row flex-wrap justify-around mt-10 items-center">
-            <div className="w-1/3 m-5">
-              <img alt="" src="/iremember2.png" className="w-auto h-auto" />
+            <div className="flex flex-col mb-20 justify-around md:flex-row">
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <img alt="" src="/iremember2.png" className="w-auto h-auto" />
+              </div>
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <p className="text-justify text-slate-700">
+                  In the early stages of the design, there was no dashboard to
+                  see all the permits status in a glance.
+                </p>
+              </div>
             </div>
-            <div className="w-1/3 m-5">
-              <p className="text-justify text-slate-700">
-                In the early stages of the design, there was no dashboard to see
-                all the permits status in a glance.
-              </p>
-            </div>
-            <div className="w-1/3 m-5">
-              <p className="text-justify text-slate-700">
-                Admin pages equiped with Role Based Access Control to limit the
-                access of permit owners, managements, or local admins.
-              </p>
-            </div>
-            <div className="w-1/3 m-5">
-              <img alt="" src="/iremember3.png" className="w-auto h-auto" />
+            <div className="flex flex-col justify-around md:flex-row-reverse">
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <img alt="" src="/iremember3.png" className="w-auto h-auto" />
+              </div>
+              <div className="w-full my-5 md:w-1/3 md:m-5">
+                <p className="text-justify text-slate-700">
+                  Admin pages equiped with Role Based Access Control to limit
+                  the access of permit owners, managements, or local admins.
+                </p>
+              </div>
             </div>
           </div>
         </section>

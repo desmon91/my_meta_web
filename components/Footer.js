@@ -44,8 +44,10 @@ export default function Footer() {
           />
         </a>
       </div>
-      <Link href="/" className="w-1/2 text-center text-orange-500">
-        ©2022 Made by Desmond Kristian
+      <Link href="/">
+        <a className="w-1/2 text-center text-orange-500 hover:text-slate-900">
+          ©2022 Made by Desmond Kristian
+        </a>
       </Link>
     </div>
   );

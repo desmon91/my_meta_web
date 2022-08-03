@@ -105,7 +105,8 @@ export default function esimper() {
                 Outdated
               </h6>
               <p className="text-justify text-slate-700 mt-2">
-                Users need an easier method to manage Simper administration
+                Users need an easier method to manage Simper administration for
+                owner and contractor
               </p>
             </div>
           </div>

@@ -4,8 +4,9 @@ export default function esimper() {
   return (
     <Layout
       title="eSimper App"
-      description="Electronic Simper (Electronic Company Driving License
+      description="Electronic Simper or eSimper (Electronic Company Driving License
       App)"
+      keywords="eSimper, electronic simper, indominco, imm, digitalisasi"
     >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/esimper_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">

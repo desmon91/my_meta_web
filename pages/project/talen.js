@@ -5,6 +5,7 @@ export default function talen() {
       title="Talen App"
       description="multipurpose app where you can quickly translate any
     foreign language from image, voice and text to any language"
+      keywords="talen, ux, user experience, tranlate app"
     >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/talen_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">

@@ -3,9 +3,10 @@ export default function esimper() {
   return (
     <Layout
       title="iRemember App"
-      description="web application to help the compliance
+      description="iRemember is a web application to help the compliance
     team managing all the company permits compliance in one place
     and help tracks the permits status through a tracker system "
+      keywords="iremember, compliance, indominco, imm, digitalisasi"
     >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/iremember_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">

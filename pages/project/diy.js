@@ -5,6 +5,7 @@ export default function diy() {
     <Layout
       title="DIY Hub"
       description="responsive web application for DIY tutorial videos"
+      keywords="diy hub, ux, user experience, do it your self"
     >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen min-h-screen bg-[url('/diy_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">

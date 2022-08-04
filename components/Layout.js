@@ -5,6 +5,7 @@ export default function Layout({
   children,
   title = "Meta Page",
   description = "Desmond's Portfolio",
+  keywords = "Desmond's Portfolio",
 }) {
   return (
     <div>
@@ -15,6 +16,7 @@ export default function Layout({
           name="keywords"
           content="Full Stack Developer, UX Designer, Desmond Kristian"
         />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Desmond Kristian" />
       </Head>
       {children}

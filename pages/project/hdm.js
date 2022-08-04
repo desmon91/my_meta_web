@@ -4,8 +4,9 @@ export default function hdm() {
   return (
     <Layout
       title="HDM App"
-      description=" HDM (Health Database Management App) for recording employee visits as a patient in the
+      description=" HDM App (Health Database Management App) for recording employee visits as a patient in the
     company mine site clinic"
+      keywords="hdm, health database management, indominco, imm, digitalisasi"
     >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/hdm_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">

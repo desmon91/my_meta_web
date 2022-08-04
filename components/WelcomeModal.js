@@ -55,9 +55,7 @@ export default function WelcomeModal({ hideModal, setHideModal, setWaveHand }) {
                     questions.
                   </p>
                   <p className="text-md text-center text-gray-500 mt-10">
-                    {
-                      "<--- You can span left and right to navigate this page --->"
-                    }
+                    {"<--- Span left or right to navigate --->"}
                   </p>
                 </div>
                 <div>

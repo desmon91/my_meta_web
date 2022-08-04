@@ -1,7 +1,11 @@
 import Layout from "../../components/Layout";
 export default function motix() {
   return (
-    <Layout title="Motix App" description="mobile movie ticket booking app">
+    <Layout
+      title="Motix App"
+      description="mobile movie ticket booking app"
+      keywords="motix, ux, user experience, mobile ticketing"
+    >
       <div className="mb-10">
         <section className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/motix_cover.png')] bg-no-repeat bg-cover bg-center bg-slate-700 bg-blend-overlay">
           <h1 className="text-slate-100 stroke-black text-6xl text-center font-bold">

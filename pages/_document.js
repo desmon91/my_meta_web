@@ -11,6 +11,11 @@ export default function Document() {
           content="Full Stack Developer, UX Designer, Desmond Kristian"
         />
         <meta name="author" content="Desmond Kristian" />
+        {/* Google verification tag */}
+        <meta
+          name="google-site-verification"
+          content="dTGyOEnAGE0-1Q-FFVcKXMHQc46YHBl9oaTt0Bsqw_8"
+        />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <Script
           strategy="lazyOnload"

@@ -32,6 +32,8 @@ import Email3D from "../objects/Email3D";
 import Linkedin3D from "../objects/Linkedin3D";
 import MyLoader from "../components/MyLoader";
 import Terrain from "../objects/Terrain";
+import ErrorBoundary from "../components/ErrorBoundary";
+
 const WelcomeModal = React.lazy(() => import("../components/WelcomeModal"));
 const Footer360 = React.lazy(() => import("../components/Footer360"));
 
@@ -81,36 +83,36 @@ export default function Home(props) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Suspense fallback={<MyLoader />}>
-        {/* modal area */}
-        <AboutModal
-          hideModal={hideAboutModal}
-          setHideModal={setHideAboutModal}
-        />
-        <ProjectModal
-          hideModal={hideProjectModal}
-          setHideModal={setHideProjectModal}
-          openInNewTab={openInNewTab}
-        />
-        <CreditsModal
-          hideModal={hideCreditsModal}
-          setHideModal={setHideCreditsModal}
-        />
-        <WelcomeModal
-          hideModal={hideWelcomeModal}
-          setHideModal={setHideWelcomeModal}
-          setWaveHand={setWaveHand}
-        />
-        {/* canvas area */}
+        <ErrorBoundary>
+          {/* modal area */}
+          <AboutModal
+            hideModal={hideAboutModal}
+            setHideModal={setHideAboutModal}
+          />
+          <ProjectModal
+            hideModal={hideProjectModal}
+            setHideModal={setHideProjectModal}
+            openInNewTab={openInNewTab}
+          />
+          <CreditsModal
+            hideModal={hideCreditsModal}
+            setHideModal={setHideCreditsModal}
+          />
+          <WelcomeModal
+            hideModal={hideWelcomeModal}
+            setHideModal={setHideWelcomeModal}
+            setWaveHand={setWaveHand}
+          />
+          {/* canvas area */}
 
-        <Canvas
-          style={{
-            width: "100vw",
-            height: "100vh",
-            position: "fixed",
-          }}
-          performance={{ min: 0.1 }}
-        >
-          <Suspense fallback={null}>
+          <Canvas
+            style={{
+              width: "100vw",
+              height: "100vh",
+              position: "fixed",
+            }}
+            performance={{ min: 0.1 }}
+          >
             {/* Performance component */}
             <Preload all />
             {/* <AdaptiveDpr pixelated /> */}
@@ -238,8 +240,8 @@ export default function Home(props) {
               luminanceSmoothing={0.025}
             />
           </EffectComposer> */}
-          </Suspense>
-        </Canvas>
+          </Canvas>
+        </ErrorBoundary>
       </Suspense>
       <Footer360 />
     </div>

@@ -5,7 +5,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="description" content="Desmond Kristian Website Portfolio" />
+        <meta
+          name="description"
+          content="See Desmond's Metaverse Web Portofolio. Desmond Kristian is a Full Stack Web Developer and a UX Designer. He like to describe himself as the jack of all trades who can design and make an end-to-end product with a user-centric design approach."
+        />
         <meta
           name="keywords"
           content="Full Stack Developer, UX Designer, Desmond Kristian"

@@ -11,7 +11,7 @@ export default function Document() {
         />
         <meta
           name="keywords"
-          content="Full Stack Developer, UX Designer, Desmond Kristian"
+          content="Full Stack Developer, UX Designer, Desmond Kristian, Computer Science, Portofolio, Web Portofolio, Metaverse"
         />
         <meta name="author" content="Desmond Kristian" />
         {/* Google verification tag */}

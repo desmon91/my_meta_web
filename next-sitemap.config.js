@@ -6,4 +6,4 @@ const config = {
   // ...other options
 };
 
-module.exports = { config };
+module.exports = { ...config };

@@ -83,17 +83,13 @@ export default function Home(props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Script type="text/javascript" id="tawk-to">
-        {` var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/631a95d137898912e96816c4/1gcftif7c';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();`}
-      </Script>
+      <Script
+        id="cid0020000323681731904"
+        data-cfasync="false"
+        async
+        src="//st.chatango.com/js/gz/emb.js"
+        style="width: 200px;height: 300px;"
+      >{`{"handle":"desmondweb","arch":"js","styles":{"a":"ff6600","b":100,"c":"000000","d":"000000","k":"ff6600","l":"ff6600","m":"ff6600","p":"10","q":"ff6600","r":100,"pos":"br","cv":1,"cvbg":"ff6600","cvw":75,"cvh":30}}`}</Script>
       <Suspense fallback={<MyLoader />}>
         <ErrorBoundary>
           {/* modal area */}

@@ -33,6 +33,7 @@ import Linkedin3D from "../objects/Linkedin3D";
 import MyLoader from "../components/MyLoader";
 import Terrain from "../objects/Terrain";
 import ErrorBoundary from "../components/ErrorBoundary";
+import Script from "next/script";
 
 const WelcomeModal = React.lazy(() => import("../components/WelcomeModal"));
 const Footer360 = React.lazy(() => import("../components/Footer360"));
@@ -82,6 +83,17 @@ export default function Home(props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <Script type="text/javascript">
+        {` var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/631a95d137898912e96816c4/1gcftif7c';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();`}
+      </Script>
       <Suspense fallback={<MyLoader />}>
         <ErrorBoundary>
           {/* modal area */}

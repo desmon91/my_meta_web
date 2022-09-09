@@ -20,7 +20,7 @@ export default function Document() {
           content="dTGyOEnAGE0-1Q-FFVcKXMHQc46YHBl9oaTt0Bsqw_8"
         />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <Script
+        {/* <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
@@ -36,7 +36,7 @@ export default function Document() {
               'cookie_domain': 'desmond-kristian.my.id'
             });
                 `}
-        </Script>
+        </Script> */}
       </Head>
       <body>
         <Main />

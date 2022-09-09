@@ -83,7 +83,7 @@ export default function Home(props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Script type="text/javascript">
+      <Script type="text/javascript" id="tawk-to">
         {` var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];

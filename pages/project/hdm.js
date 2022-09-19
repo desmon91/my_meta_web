@@ -29,7 +29,8 @@ export default function hdm() {
                 application for recording employee visits as a patient in the
                 company mine site clinic and helps the Occupational Health team
                 to overview and make a report from the data they collected
-                through the app.
+                through the app. This web application is built using Pencil
+                Evolus, React.js, PostgreSQL, and Node.js.
               </p>
             </div>
             <div className="w-1/3 m-5">

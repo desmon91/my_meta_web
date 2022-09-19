@@ -28,7 +28,9 @@ export default function esimper() {
                 eSimper or Electronic Simper (Electronic Company Driving License
                 App) is an internal web application for digitalizing the
                 conventional printed Simper and helps quicken the Simper
-                administration process.
+                administration process. This web application is built using
+                Figma, Next.js, Mail API, MongoDB, S3 Object Storage, and
+                Node.js.
               </p>
             </div>
             <div className="w-1/3 m-5">

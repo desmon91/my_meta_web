@@ -26,7 +26,7 @@ export default function motix() {
                 MoTix is a mobile movie ticket booking app, this app offer an
                 enjoyable experience when booking a movie ticket without waiting
                 in line which will save more time and increase more focus time
-                to the movie.
+                to the movie. This app design is built solely using Figma.
               </p>
             </div>
             <div className="w-1/3 m-5">

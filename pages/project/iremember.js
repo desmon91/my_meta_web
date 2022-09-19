@@ -28,7 +28,8 @@ export default function esimper() {
                 iRemember is an internal web application to help the compliance
                 team managing all the company permits compliance in one place
                 and help tracks the permits status through a tracker system and
-                automatic reminder.
+                automatic reminder. This web application is built using Figma,
+                React.js, Outlook API, OneDrive API, MongoDB, and Node.js.
               </p>
             </div>
             <div className="w-1/3 m-5">

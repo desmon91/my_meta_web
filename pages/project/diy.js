@@ -27,7 +27,8 @@ export default function diy() {
                 DIY Hub is a responsive web application for DIY tutorial videos,
                 this web app offer a high quality tutorial videos by rating
                 system from the users. With this system people easily find a
-                trustworthy tutorial videos in a zip.
+                trustworthy tutorial videos in a zip. This app design is built
+                solely using Adobe XD.
               </p>
             </div>
             <div className="w-1/3 m-5">

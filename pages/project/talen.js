@@ -27,6 +27,7 @@ export default function talen() {
                 Talen is a multipurpose app where you can quickly translate any
                 foreign language from image, voice and text to any language,
                 furthermore you can learn that language in a fun and easy way.
+                This app design is built solely using Figma.
               </p>
             </div>
             <div className="w-1/3 m-5">

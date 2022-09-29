@@ -21,6 +21,8 @@ import {
   useProgress,
 } from "@react-three/drei";
 
+import { Debug, Physics, useBox, usePlane } from "@react-three/cannon";
+
 import AboutText from "../objects/AboutText";
 import WelcomeText from "../objects/WelcomeText";
 import ProjectText from "../objects/ProjectText";
@@ -168,7 +170,7 @@ export default function Home(props) {
             <PerspectiveCamera
               makeDefault
               //this is for moving camera position up or down in x,y,z
-              far={100}
+              far={200}
               position={[0, 3, 0]}
             />
 
@@ -181,60 +183,66 @@ export default function Home(props) {
             />
             <ambientLight color={"lightblue"} intensity={0.5} />
             {/* Bellow contains models to render */}
-            <Terrain scale={1.5} />
-            <WelcomeText />
-            <AboutText />
-            <ProjectText />
-            <ContactText />
-            <CreditsText />
+            <Physics
+              gravity={[0, -9.8, 0]}
+              broadphase="Naive"
+              allowSleep={true}
+            >
+              <Terrain scale={1} />
 
-            <Avatar
-              position={[0, 0, -2.5]}
-              rotation={[0, 0, 0]}
-              waveHand={waveHand}
-              setWaveHand={setWaveHand}
-            />
-            <Button3D
-              name="about-button"
-              hideModal={setHideAboutModal}
-              onHoverButton={onHoverButton}
-              position={[4.5, 0.8, -1.6]}
-              rotation={[1.58, 0, 1.5]}
-              scale={0.4}
-            />
-            <Button3D
-              name="project-button"
-              hideModal={setHideProjectModal}
-              onHoverButton={onHoverButton}
-              position={[3.38, 0.8, 4]}
-              rotation={[1.58, 0, -3.5]}
-              scale={0.4}
-            />
-            <Button3D
-              name="credits-button"
-              hideModal={setHideCreditsModal}
-              onHoverButton={onHoverButton}
-              position={[-7, 0.8, 0.35]}
-              rotation={[-4.72, 0, -2]}
-              scale={0.4}
-            />
-            <Email3D
-              onHoverButton={onHoverButton}
-              openInNewTab={openInNewTab}
-              position={[-1.7, 0.8, 5.7]}
-              rotation={[1.6, 0, 3.5]}
-              scale={1}
-            />
-            <Linkedin3D
-              onHoverButton={onHoverButton}
-              openInNewTab={openInNewTab}
-              position={[-2.4, 0.79, 5.8]}
-              rotation={[1.6, 0, 3.5]}
-              scale={0.4}
-            />
-            <fogExp2 attach="fog" color="orange" density={0.04} />
+              <WelcomeText />
+              <AboutText />
+              <ProjectText />
+              <ContactText />
+              <CreditsText />
 
-            {/* <EffectComposer autoClear={false}>
+              <Avatar
+                position={[0, 0, -2.5]}
+                rotation={[0, 0, 0]}
+                waveHand={waveHand}
+                setWaveHand={setWaveHand}
+              />
+              <Button3D
+                name="about-button"
+                hideModal={setHideAboutModal}
+                onHoverButton={onHoverButton}
+                position={[4.5, 0.8, -1.6]}
+                rotation={[1.58, 0, 1.5]}
+                scale={0.4}
+              />
+              <Button3D
+                name="project-button"
+                hideModal={setHideProjectModal}
+                onHoverButton={onHoverButton}
+                position={[3.38, 0.8, 4]}
+                rotation={[1.58, 0, -3.5]}
+                scale={0.4}
+              />
+              <Button3D
+                name="credits-button"
+                hideModal={setHideCreditsModal}
+                onHoverButton={onHoverButton}
+                position={[-7, 0.8, 0.35]}
+                rotation={[-4.72, 0, -2]}
+                scale={0.4}
+              />
+              <Email3D
+                onHoverButton={onHoverButton}
+                openInNewTab={openInNewTab}
+                position={[-1.7, 0.8, 5.7]}
+                rotation={[1.6, 0, 3.5]}
+                scale={1}
+              />
+              <Linkedin3D
+                onHoverButton={onHoverButton}
+                openInNewTab={openInNewTab}
+                position={[-2.4, 0.79, 5.8]}
+                rotation={[1.6, 0, 3.5]}
+                scale={0.4}
+              />
+              <fogExp2 attach="fog" color="orange" density={0.04} />
+
+              {/* <EffectComposer autoClear={false}>
             <SelectiveBloom
               lights={[lightRef]}
               selection={selectedButton}
@@ -248,6 +256,7 @@ export default function Home(props) {
               luminanceSmoothing={0.025}
             />
           </EffectComposer> */}
+            </Physics>
           </Canvas>
         </ErrorBoundary>
       </Suspense>

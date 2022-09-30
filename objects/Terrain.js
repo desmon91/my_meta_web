@@ -222,7 +222,7 @@ export default function Terrain({ ...props }) {
       <mesh
         geometry={nodes.Grass1.geometry}
         material={materials["Material.008"]}
-        position={[1.27, -0.28, 8.53]}
+        position={[1.27, -0.45, 8.53]}
       />
       <mesh
         geometry={nodes.Grass2.geometry}
@@ -247,7 +247,7 @@ export default function Terrain({ ...props }) {
       <mesh
         geometry={nodes.Grass7.geometry}
         material={materials["Material.008"]}
-        position={[8.58, -0.14, -0.17]}
+        position={[8.58, -0.28, -0.17]}
       />
       <mesh
         geometry={nodes.Grass8.geometry}
@@ -272,7 +272,7 @@ export default function Terrain({ ...props }) {
       <mesh
         geometry={nodes.Grass6.geometry}
         material={materials["Material.008"]}
-        position={[2.75, 0.09, -6.27]}
+        position={[2.75, -0.2, -6.27]}
       />
     </group>
   );

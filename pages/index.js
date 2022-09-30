@@ -133,7 +133,7 @@ export default function Home(props) {
             {/* <axesHelper /> */}
             {/* Sky component */}
             <Sky
-              distance={1000}
+              distance={50}
               turbidity={0}
               rayleigh={1000}
               azimuth={0}
@@ -170,7 +170,7 @@ export default function Home(props) {
             <PerspectiveCamera
               makeDefault
               //this is for moving camera position up or down in x,y,z
-              far={150}
+              far={100}
               position={[0, 3, 0]}
             />
 
@@ -240,7 +240,7 @@ export default function Home(props) {
                 rotation={[1.6, 0, 3.5]}
                 scale={0.4}
               />
-              {/* <fogExp2 attach="fog" color="orange" density={0.04} /> */}
+              <fogExp2 attach="fog" color="orange" density={0.06} />
 
               {/* <EffectComposer autoClear={false}>
             <SelectiveBloom

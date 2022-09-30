@@ -170,7 +170,7 @@ export default function Home(props) {
             <PerspectiveCamera
               makeDefault
               //this is for moving camera position up or down in x,y,z
-              far={200}
+              far={150}
               position={[0, 3, 0]}
             />
 
@@ -240,7 +240,7 @@ export default function Home(props) {
                 rotation={[1.6, 0, 3.5]}
                 scale={0.4}
               />
-              <fogExp2 attach="fog" color="orange" density={0.04} />
+              {/* <fogExp2 attach="fog" color="orange" density={0.04} /> */}
 
               {/* <EffectComposer autoClear={false}>
             <SelectiveBloom

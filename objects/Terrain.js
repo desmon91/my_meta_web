@@ -19,9 +19,8 @@ export default function Terrain({ ...props }) {
   const [barrelRef1, barrelRef1Api] = useCylinder(
     () => ({
       mass: 20,
-      linearDamping: 0.1,
-      material: { friction: 0.5, resitution: 0.05 },
-      position: [-2.65, 0.5, -3.91],
+
+      position: [-2.7, 0.5, -3.91],
       args: [0.3, 0.3, 0.78, 8],
       ...props,
     }),
@@ -30,8 +29,6 @@ export default function Terrain({ ...props }) {
   const [barrelRef2, barrelRef2Api] = useCylinder(
     () => ({
       mass: 20,
-      linearDamping: 0.1,
-      material: { friction: 0.5, resitution: 0.05 },
       position: [-3.34, 0.5, -3.27],
       args: [0.3, 0.3, 0.78, 8],
       ...props,
@@ -41,8 +38,6 @@ export default function Terrain({ ...props }) {
   const [barrelRef3, barrelRef3Api] = useCylinder(
     () => ({
       mass: 20,
-      linearDamping: 0.1,
-      material: { friction: 0.5, resitution: 0.05 },
       position: [-3.33, 1.3, -3.9],
       args: [0.3, 0.3, 0.78, 8],
       ...props,
@@ -52,8 +47,6 @@ export default function Terrain({ ...props }) {
   const [barrelRef4, barrelRef4Api] = useCylinder(
     () => ({
       mass: 20,
-      linearDamping: 0.1,
-      material: { friction: 0.5, resitution: 0.05 },
       position: [-3.34, 0.5, -3.91],
       args: [0.3, 0.3, 0.78, 8],
       ...props,
@@ -82,7 +75,7 @@ export default function Terrain({ ...props }) {
     [nodes]
   );
   const [groundRef] = useConvexPolyhedron(() => ({
-    position: [0.02, -1.28, 0.02],
+    position: [0.01, -1.38, 0.06],
     material: { friction: 0.2, resitution: 0.8 },
     ...props,
     args: groundGeo,
@@ -91,18 +84,6 @@ export default function Terrain({ ...props }) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group
-        ref={barrelRef1}
-        onPointerDown={() => {
-          barrelRef1Api.applyImpulse([0, 20, 5], [0, 0, 0]);
-        }}
-      >
-        <mesh geometry={nodes.Cylinder001.geometry} material={materials.wood} />
-        <mesh
-          geometry={nodes.Cylinder001_1.geometry}
-          material={materials.meatl}
-        />
-      </group>
       <group
         ref={barrelRef2}
         onPointerDown={() => {
@@ -133,9 +114,9 @@ export default function Terrain({ ...props }) {
           barrelRef4Api.applyImpulse([0, 20, 5], [0, 0, 0]);
         }}
       >
-        <mesh geometry={nodes.Cylinder067.geometry} material={materials.wood} />
+        <mesh geometry={nodes.Cylinder004.geometry} material={materials.wood} />
         <mesh
-          geometry={nodes.Cylinder067_1.geometry}
+          geometry={nodes.Cylinder004_1.geometry}
           material={materials.meatl}
         />
       </group>
@@ -143,33 +124,38 @@ export default function Terrain({ ...props }) {
         ref={stoneFloorRef}
         geometry={nodes.stone_floor.geometry}
         material={materials.stone}
+        position={[-3.15, -0.04, -3.75]}
       />
-      <mesh
-        geometry={nodes.Fence.geometry}
-        material={materials.wood}
-        position={[3.97, 0.17, 6.47]}
-      />
-      <group position={[0.02, -1.28, 0.02]} ref={groundRef}>
+      <group
+        ref={barrelRef1}
+        onPointerDown={() => {
+          barrelRef1Api.applyImpulse([0, 20, 5], [0, 0, 0]);
+        }}
+      >
+        <mesh geometry={nodes.Cylinder001.geometry} material={materials.wood} />
         <mesh
-          geometry={nodes.Cylinder030.geometry}
-          material={materials.grass}
-        />
-        <mesh
-          geometry={nodes.Cylinder030_1.geometry}
-          material={materials.stone}
+          geometry={nodes.Cylinder001_1.geometry}
+          material={materials.meatl}
         />
       </group>
       <mesh
-        geometry={nodes.RoadPath.geometry}
-        material={materials["Material.006"]}
-        position={[3.1, -0.28, 2.3]}
+        geometry={nodes.Fence.geometry}
+        material={materials.wood}
+        position={[3.19, -0.09, 5.65]}
       />
+      <group>
+        <mesh
+          ref={groundRef}
+          geometry={nodes.Cylinder030.geometry}
+          material={materials.grass}
+        />
+      </group>
       <mesh
         geometry={nodes.Fence001.geometry}
         material={materials.wood}
-        position={[0.06, 0.02, -6.7]}
+        position={[-0.12, -0.22, -5.96]}
       />
-      <group position={[-7.41, 2.9, -2.87]}>
+      <group position={[-6.79, 2.78, -2.26]}>
         <mesh geometry={nodes.Cylinder056.geometry} material={materials.wood} />
         <mesh
           geometry={nodes.Cylinder056_1.geometry}
@@ -246,7 +232,7 @@ export default function Terrain({ ...props }) {
       <mesh
         geometry={nodes.Grass3.geometry}
         material={materials["Material.008"]}
-        position={[-7.79, -0.28, 4.11]}
+        position={[-7.79, -0.48, 4.11]}
       />
       <mesh
         geometry={nodes.Grass4.geometry}
@@ -266,12 +252,12 @@ export default function Terrain({ ...props }) {
       <mesh
         geometry={nodes.Grass8.geometry}
         material={materials["Material.008"]}
-        position={[7.81, -0.28, 5.68]}
+        position={[6.24, -0.28, 5.68]}
       />
       <mesh
         geometry={nodes.Grass9.geometry}
         material={materials["Material.008"]}
-        position={[4.37, -0.25, 5.2]}
+        position={[2.81, -0.25, 5.2]}
       />
       <mesh
         geometry={nodes.Grass10.geometry}

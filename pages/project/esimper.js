@@ -113,6 +113,16 @@ export default function esimper() {
               </p>
             </div>
           </div>
+          <div className="w-4/5 flex flex-row justify-around">
+            <div className="w-full md:w-1/3 m-5">
+              <h6 className="text-lg text-center text-slate-700 font-semibold">
+                Manpower
+              </h6>
+              <p className="text-justify text-slate-700 mt-2">
+                Users need to do a multitasking job in a low manpower condition
+              </p>
+            </div>
+          </div>
         </section>
         <section className="flex flex-col justify-center items-center w-screen min-h-screen my-10">
           <div className="w-4/5 flex flex-col justify-center">

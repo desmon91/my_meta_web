@@ -102,25 +102,28 @@ export default function esimper() {
           <h3 className="text-4xl text-orange-500 font-bold text-center mt-10">
             User Pain Points
           </h3>
-          <div className="w-4/5 flex flex-row justify-around">
-            <div className="w-full md:w-1/3 m-5">
-              <h6 className="text-lg text-center text-slate-700 font-semibold">
-                Outdated
-              </h6>
-              <p className="text-justify text-slate-700 mt-2">
-                Users need an easier method to manage Simper administration for
-                owner and contractor
-              </p>
+          <div className="w-full flex flex-row justify-around items-start mt-5">
+            <div className="w-4/5 flex flex-row justify-around">
+              <div className="w-full md:w-1/3 m-5">
+                <h6 className="text-lg text-center text-slate-700 font-semibold">
+                  Outdated
+                </h6>
+                <p className="text-justify text-slate-700 mt-2">
+                  Users need an easier method to manage Simper administration
+                  for owner and contractor
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="w-4/5 flex flex-row justify-around">
-            <div className="w-full md:w-1/3 m-5">
-              <h6 className="text-lg text-center text-slate-700 font-semibold">
-                Manpower
-              </h6>
-              <p className="text-justify text-slate-700 mt-2">
-                Users need to do a multitasking job in a low manpower condition
-              </p>
+            <div className="w-4/5 flex flex-row justify-around">
+              <div className="w-full md:w-1/3 m-5">
+                <h6 className="text-lg text-center text-slate-700 font-semibold">
+                  Manpower
+                </h6>
+                <p className="text-justify text-slate-700 mt-2">
+                  Users need to do a multitasking job in a low manpower
+                  condition
+                </p>
+              </div>
             </div>
           </div>
         </section>
